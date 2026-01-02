@@ -21,7 +21,7 @@ const LandingPageHero = () => {
         </Badge>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          <span className="bg-linear-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r text-brand bg-clip-text ">
             Morph Legacy Systems
           </span>
           <br />
