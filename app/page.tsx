@@ -2,11 +2,13 @@ import { CaseStudy } from "@/components/case-study";
 import LandingPageHero from "@/components/hero/landing-page-hero";
 import ReadyToMorph from "@/components/ready-to-morph";
 import Services from "@/components/services";
+import { StructuredData } from "@/components/structured-data";
 import Value from "@/components/value";
 
 export default function MorpheexLanding() {
   return (
     <div className="min-h-screen bg-background text-white selection:bg-indigo-500/30">
+      <StructuredData />
       {/* --- GRID & GRADIENT OVERLAY --- */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div

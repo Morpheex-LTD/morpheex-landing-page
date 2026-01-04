@@ -25,9 +25,7 @@ const LandingPageHero = () => {
             Morph Legacy Systems
           </span>
           <br />
-          <span className="bg-linear-to-r from-brand-accent to-brand bg-clip-text text-transparent">
-            into Future Advantages
-          </span>
+          <span className="text-brand">into Future Advantages</span>
         </h1>
 
         <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
