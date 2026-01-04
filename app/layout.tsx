@@ -1,5 +1,6 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -15,12 +16,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://morpheex.com'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://morpheex.com"
+  ),
   title: {
     default: "Morpheex | Transform Legacy Systems into Future Advantages",
-    template: "%s | Morpheex"
+    template: "%s | Morpheex",
   },
-  description: "Morpheex helps enterprises modernize legacy systems with high-performance software and serverless cloud solutions. Official AWS Partner specializing in cloud migration and technical debt elimination.",
+  description:
+    "Morpheex helps enterprises modernize legacy systems with high-performance software and serverless cloud solutions. Official AWS Partner specializing in cloud migration and technical debt elimination.",
   keywords: [
     "cloud migration",
     "AWS partner",
@@ -31,7 +35,7 @@ export const metadata: Metadata = {
     "enterprise software",
     "cloud audit",
     "AWS consulting",
-    "system modernization"
+    "system modernization",
   ],
   authors: [{ name: "Morpheex" }],
   creator: "Morpheex",
@@ -42,9 +46,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
@@ -53,7 +57,8 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Morpheex",
     title: "Morpheex | Transform Legacy Systems into Future Advantages",
-    description: "Enterprise cloud modernization and serverless solutions. Official AWS Partner helping businesses eliminate technical debt.",
+    description:
+      "Enterprise cloud modernization and serverless solutions. Official AWS Partner helping businesses eliminate technical debt.",
     images: [
       {
         url: "/og-image.png",
@@ -66,7 +71,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Morpheex | Transform Legacy Systems into Future Advantages",
-    description: "Enterprise cloud modernization and serverless solutions. Official AWS Partner helping businesses eliminate technical debt.",
+    description:
+      "Enterprise cloud modernization and serverless solutions. Official AWS Partner helping businesses eliminate technical debt.",
     images: ["/og-image.png"],
     creator: "@morpheex",
   },
@@ -100,6 +106,7 @@ export default function RootLayout({
 
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
