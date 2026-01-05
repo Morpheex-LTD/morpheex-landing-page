@@ -1,5 +1,6 @@
 "use client";
 
+import { CTA } from "@/components/cta/cta";
 import {
   CaseStudyCard,
   PageContainer,
@@ -208,6 +209,19 @@ export default function SuccessPage() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-20">
+          <CTA
+            title="Ready to Become Our Next Success Story?"
+            description="Join the growing list of companies that have transformed their infrastructure with Morpheex. Start with a free cloud audit and see what's possible."
+            primaryButtonText="Book Your Free Audit"
+            primaryButtonHref="/contact"
+            secondaryButtonText="View Our Process"
+            secondaryButtonHref="/protocol"
+            variant="default"
+          />
         </div>
       </div>
     </PageContainer>

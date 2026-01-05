@@ -30,9 +30,10 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/office", label: "The Office" },
+    { href: "/about", label: "About" },
     { href: "/protocol", label: "Protocol" },
-    { href: "/success", label: "Success Stories" },
+    { href: "/success", label: "Success" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const isActive = (href: string) => {

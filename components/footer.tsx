@@ -8,30 +8,62 @@ const Footer = () => {
           <div className="space-y-2">
             <Logo />
             <p className="text-muted-foreground max-w-xs text-sm">
-              Defining the next multiplier for software and cloud delivery. An
-              Official AWS Services Partner.
+              AWS-specialized cloud modernization partner based in Lagos, Nigeria.
+              Serving clients globally with enterprise-grade cloud solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
             <div className="space-y-4">
               <h5 className="text-foreground font-bold text-xs uppercase tracking-widest">
-                Navigation
+                Company
               </h5>
               <ul className="text-muted-foreground space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
-                    Services
+                  <a href="/about" className="hover:text-foreground transition-colors">
+                    About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
-                    Process
+                  <a href="/protocol" className="hover:text-foreground transition-colors">
+                    Our Process
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
-                    About
+                  <a href="/success" className="hover:text-foreground transition-colors">
+                    Case Studies
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="hover:text-foreground transition-colors">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <h5 className="text-foreground font-bold text-xs uppercase tracking-widest">
+                Services
+              </h5>
+              <ul className="text-muted-foreground space-y-2 text-sm">
+                <li>
+                  <a href="/#services" className="hover:text-foreground transition-colors">
+                    Cloud Modernization
+                  </a>
+                </li>
+                <li>
+                  <a href="/#services" className="hover:text-foreground transition-colors">
+                    Full-Stack Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/#services" className="hover:text-foreground transition-colors">
+                    AI & Data Strategy
+                  </a>
+                </li>
+                <li>
+                  <a href="/#services" className="hover:text-foreground transition-colors">
+                    AWS Consulting
                   </a>
                 </li>
               </ul>
@@ -42,18 +74,18 @@ const Footer = () => {
               </h5>
               <ul className="text-muted-foreground space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                     LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                     GitHub
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition-colors">
-                    AWS Partner Finder
+                  <a href="https://aws.amazon.com/partners" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                    AWS Partner Profile
                   </a>
                 </li>
               </ul>
