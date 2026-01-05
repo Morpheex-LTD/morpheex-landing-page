@@ -25,11 +25,11 @@ const StatsCard = ({
           {value}
         </div>
       </div>
-      <div className="text-sm text-slate-400 uppercase tracking-wide">
+      <div className="text-sm text-muted-foreground uppercase tracking-wide">
         {label}
       </div>
       {description && (
-        <p className="text-xs text-slate-500 mt-2">{description}</p>
+        <p className="text-xs text-muted-foreground mt-2">{description}</p>
       )}
     </div>
   );

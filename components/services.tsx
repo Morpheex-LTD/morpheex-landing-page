@@ -13,25 +13,25 @@ const Services = () => {
     <section id="services" className="py-20 px-6 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-purple-500/10 text-purple-300 border-purple-500/30">
+          <Badge className="mb-4 bg-brand-accent/10 text-brand-accent border-brand-accent/30">
             The Multiplier Effect
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
             Strategic services to accelerate your digital transformation
           </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {/* Card 1 */}
-          <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/30 border-slate-700/50 hover:border-indigo-500/50 transition-all hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1 backdrop-blur-sm group">
+          <Card className="bg-gradient-to-br from-card/50 to-card/30 hover:border-brand/50 transition-all hover:shadow-xl hover:shadow-brand/10 hover:-translate-y-1 backdrop-blur-sm group">
             <CardHeader>
-              <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/20 transition-all group-hover:scale-110">
-                <Cloud className="w-6 h-6 text-indigo-400" />
+              <div className="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand/20 transition-all group-hover:scale-110">
+                <Cloud className="w-6 h-6 text-brand" />
               </div>
-              <CardTitle className="text-white text-2xl">
+              <CardTitle className="text-foreground text-2xl">
                 Cloud Modernization
               </CardTitle>
-              <CardDescription className="text-slate-400">
+              <CardDescription>
                 Stop paying for idle servers. We refactor your stack into an
                 elastic, AWS-optimized engine.
               </CardDescription>
@@ -45,9 +45,9 @@ const Services = () => {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-slate-300"
+                    className="flex items-start gap-2 text-muted-foreground"
                   >
-                    <CheckCircle2Icon className="w-5 h-5 text-indigo-400 mt-0.5 shrink-0" />
+                    <CheckCircle2Icon className="w-5 h-5 text-brand mt-0.5 shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -56,15 +56,15 @@ const Services = () => {
           </Card>
 
           {/* Card 2 */}
-          <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/30 border-slate-700/50 hover:border-purple-500/50 transition-all hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 backdrop-blur-sm group">
+          <Card className="bg-gradient-to-br from-card/50 to-card/30 hover:border-brand-accent/50 transition-all hover:shadow-xl hover:shadow-brand-accent/10 hover:-translate-y-1 backdrop-blur-sm group">
             <CardHeader>
-              <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-500/20 transition-all group-hover:scale-110">
-                <Code2Icon className="w-6 h-6 text-purple-400" />
+              <div className="w-12 h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-accent/20 transition-all group-hover:scale-110">
+                <Code2Icon className="w-6 h-6 text-brand-accent" />
               </div>
-              <CardTitle className="text-white text-2xl">
+              <CardTitle className="text-foreground text-2xl">
                 Full-Stack Dev
               </CardTitle>
-              <CardDescription className="text-slate-400">
+              <CardDescription>
                 High-performance Next.js and Node.js applications built for
                 scale, speed, and security.
               </CardDescription>
@@ -78,9 +78,9 @@ const Services = () => {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-slate-300"
+                    className="flex items-start gap-2 text-muted-foreground"
                   >
-                    <CheckCircle2Icon className="w-5 h-5 text-purple-400 mt-0.5 shrink-0" />
+                    <CheckCircle2Icon className="w-5 h-5 text-brand-accent mt-0.5 shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -89,15 +89,15 @@ const Services = () => {
           </Card>
 
           {/* Card 3 */}
-          <Card className="bg-gradient-to-br from-slate-900/50 to-slate-800/30 border-slate-700/50 hover:border-indigo-500/50 transition-all hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1 backdrop-blur-sm group">
+          <Card className="bg-gradient-to-br from-card/50 to-card/30 hover:border-brand/50 transition-all hover:shadow-xl hover:shadow-brand/10 hover:-translate-y-1 backdrop-blur-sm group">
             <CardHeader>
-              <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-500/20 transition-all group-hover:scale-110">
-                <Bot className="w-6 h-6 text-indigo-400" />
+              <div className="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand/20 transition-all group-hover:scale-110">
+                <Bot className="w-6 h-6 text-brand" />
               </div>
-              <CardTitle className="text-white text-2xl">
+              <CardTitle className="text-foreground text-2xl">
                 AI & Data Strategy
               </CardTitle>
-              <CardDescription className="text-slate-400">
+              <CardDescription>
                 Leverage Amazon Bedrock to integrate generative AI directly into
                 your business workflows.
               </CardDescription>
@@ -111,9 +111,9 @@ const Services = () => {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-slate-300"
+                    className="flex items-start gap-2 text-muted-foreground"
                   >
-                    <CheckCircle2Icon className="w-5 h-5 text-indigo-400 mt-0.5 shrink-0" />
+                    <CheckCircle2Icon className="w-5 h-5 text-brand mt-0.5 shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}

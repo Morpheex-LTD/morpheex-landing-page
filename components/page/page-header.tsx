@@ -20,7 +20,7 @@ export function PageHeader({
     <div className={`mb-20 ${centered ? "text-center" : ""}`}>
       {badgeText && (
         <Badge
-          className={`mb-6 bg-purple-500/10 text-purple-300 border-purple-500/30 px-4 py-2 text-sm hover:bg-purple-500/20 transition-all ${
+          className={`mb-6 bg-brand-accent/10 text-brand-accent border-brand-accent/30 px-4 py-2 text-sm hover:bg-brand-accent/20 transition-all ${
             centered ? "inline-flex" : ""
           }`}
         >
@@ -33,13 +33,13 @@ export function PageHeader({
           centered ? "" : ""
         }`}
       >
-        <span className="bg-linear-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-brand-accent to-brand bg-clip-text text-transparent">
           {title}
         </span>
       </h1>
       {description && (
         <p
-          className={`text-xl text-slate-300 leading-relaxed ${
+          className={`text-xl text-muted-foreground leading-relaxed ${
             centered ? "max-w-3xl mx-auto" : ""
           }`}
         >

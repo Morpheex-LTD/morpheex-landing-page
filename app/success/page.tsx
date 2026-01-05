@@ -59,16 +59,16 @@ export default function SuccessPage() {
           <div className="mb-20">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12">
               <div className="max-w-2xl">
-                <Badge className="mb-6 bg-purple-500/10 text-purple-300 border-purple-500/30 px-4 py-2 text-sm hover:bg-purple-500/20 transition-all">
+                <Badge className="mb-6 bg-brand-accent/10 text-brand-accent border-brand-accent/30 px-4 py-2 text-sm hover:bg-brand-accent/20 transition-all">
                   <Award className="w-4 h-4 mr-2 inline" />
                   Real Results, Real Impact
                 </Badge>
                 <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter mb-6 leading-tight">
-                  <span className="bg-linear-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-brand-accent to-brand bg-clip-text text-transparent">
                     Proven Protocols.
                   </span>
                 </h1>
-                <p className="text-slate-300 text-xl leading-relaxed">
+                <p className="text-muted-foreground text-xl leading-relaxed">
                   We don&apos;t just build apps; we engineer outcomes. Explore
                   our technical archives of architectural refactoring and
                   modernization.
@@ -77,7 +77,7 @@ export default function SuccessPage() {
               <div className="flex gap-4">
                 <Button
                   variant="outline"
-                  className="border-indigo-500/30 bg-transparent hover:text-indigo-400 hover:border-indigo-400 hover:bg-indigo-500/10 transition-all rounded-full"
+                  className="border-brand/30 bg-transparent hover:text-brand hover:border-brand hover:bg-brand/10 transition-all rounded-full"
                 >
                   <Search className="w-4 h-4 mr-2" /> Filter by Service
                 </Button>
@@ -85,7 +85,7 @@ export default function SuccessPage() {
             </div>
 
           {/* Key Metrics Bar */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-8 bg-slate-900/50 border border-white/5 rounded-2xl backdrop-blur-sm">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-8 bg-card/50 border rounded-2xl backdrop-blur-sm">
             <StatsCard
               value="95%"
               label="Client Retention"
@@ -135,53 +135,53 @@ export default function SuccessPage() {
         </div>
 
         {/* System Diagram Showcase Block */}
-        <div className="relative bg-gradient-to-br from-indigo-600/20 to-purple-600/20 border border-indigo-500/30 rounded-[40px] p-12 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-brand/20 to-brand-accent/20 border border-brand/30 rounded-[40px] p-12 overflow-hidden">
           <div className="absolute inset-0 opacity-5">
             <div
               className="w-full h-full"
               style={{
-                backgroundImage: `radial-gradient(circle, #6366f1 1px, transparent 1px)`,
+                backgroundImage: `radial-gradient(circle, var(--brand) 1px, transparent 1px)`,
                 backgroundSize: "24px 24px",
               }}
             />
           </div>
           <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-6 bg-indigo-500/10 text-indigo-300 border-indigo-500/30 px-4 py-2 text-sm">
+              <Badge className="mb-6 bg-brand/10 text-brand border-brand/30 px-4 py-2 text-sm">
                 <FileCode className="w-4 h-4 mr-2 inline" />
                 For Enterprise Partners
               </Badge>
               <h3 className="text-4xl md:text-5xl font-black italic mb-6 leading-tight">
-                <span className="bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-brand to-brand-accent bg-clip-text text-transparent">
                   ARCHITECTURAL TRANSPARENCY.
                 </span>
               </h3>
-              <p className="text-slate-300 mb-8 text-lg leading-relaxed">
+              <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
                 For our Tier-1 partners, we provide full access to our
                 proprietary{" "}
-                <strong className="text-white">
+                <strong className="text-foreground">
                   Infrastructure-as-Code (IaC)
                 </strong>{" "}
                 library. See exactly how we map VPCs, IAM roles, and serverless
                 logic.
               </p>
               <div className="space-y-3 mb-8">
-                <div className="flex items-center gap-3 text-sm text-slate-400">
-                  <div className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-brand" />
                   Complete Terraform & CloudFormation templates
                 </div>
-                <div className="flex items-center gap-3 text-sm text-slate-400">
-                  <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-brand-accent" />
                   Architecture decision records (ADRs)
                 </div>
-                <div className="flex items-center gap-3 text-sm text-slate-400">
-                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-brand" />
                   Security compliance documentation
                 </div>
               </div>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 rounded-full font-bold px-8 shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all hover:scale-105"
+                className="bg-gradient-to-r from-brand to-brand-accent hover:opacity-90 rounded-full font-bold px-8 shadow-lg shadow-brand/30 hover:shadow-brand/50 transition-all hover:scale-105"
               >
                 Access Documentation Office
               </Button>
@@ -190,20 +190,20 @@ export default function SuccessPage() {
             {/* Abstract Diagram Representation */}
             <div className="relative flex justify-center">
               <div className="w-full max-w-sm aspect-square relative flex items-center justify-center">
-                <div className="absolute inset-0 border border-indigo-500/20 rounded-full animate-spin-slow" />
-                <div className="absolute inset-10 border border-purple-500/20 rounded-full animate-reverse-spin" />
-                <div className="z-20 bg-gradient-to-br from-indigo-600 to-purple-600 p-8 rounded-2xl shadow-2xl shadow-indigo-500/20">
-                  <GitBranch className="w-16 h-16 text-white" />
+                <div className="absolute inset-0 border border-brand/20 rounded-full animate-spin-slow" />
+                <div className="absolute inset-10 border border-brand-accent/20 rounded-full animate-reverse-spin" />
+                <div className="z-20 bg-gradient-to-br from-brand to-brand-accent p-8 rounded-2xl shadow-2xl shadow-brand/20">
+                  <GitBranch className="w-16 h-16 text-primary-foreground" />
                 </div>
                 {/* Floating Tech Icons */}
-                <div className="absolute top-0 bg-slate-900 p-4 rounded-xl border border-indigo-500/30 shadow-xl translate-x-20 hover:scale-110 transition-transform">
-                  <Database className="w-6 h-6 text-cyan-400" />
+                <div className="absolute top-0 bg-card p-4 rounded-xl border border-brand/30 shadow-xl translate-x-20 hover:scale-110 transition-transform">
+                  <Database className="w-6 h-6 text-brand" />
                 </div>
-                <div className="absolute bottom-10 left-0 bg-slate-900 p-4 rounded-xl border border-purple-500/30 shadow-xl -translate-x-10 hover:scale-110 transition-transform">
-                  <ShieldCheck className="w-6 h-6 text-green-400" />
+                <div className="absolute bottom-10 left-0 bg-card p-4 rounded-xl border border-brand-accent/30 shadow-xl -translate-x-10 hover:scale-110 transition-transform">
+                  <ShieldCheck className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
-                <div className="absolute top-20 left-0 bg-slate-900 p-4 rounded-xl border border-indigo-500/30 shadow-xl -translate-x-5 hover:scale-110 transition-transform">
-                  <Zap className="w-6 h-6 text-yellow-400" />
+                <div className="absolute top-20 left-0 bg-card p-4 rounded-xl border border-brand/30 shadow-xl -translate-x-5 hover:scale-110 transition-transform">
+                  <Zap className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
                 </div>
               </div>
             </div>

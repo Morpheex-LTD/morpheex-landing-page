@@ -48,6 +48,10 @@
   --color-brand: var(--brand);
   --color-brand-accent: var(--brand-accent);
   --color-brand-dark: var(--brand-dark);
+  --color-grid-pattern: var(--grid-pattern);
+  --color-gradient-glow-primary: var(--gradient-glow-primary);
+  --color-gradient-glow-secondary: var(--gradient-glow-secondary);
+  --color-selection: var(--selection);
 }
 
 :root {
@@ -86,6 +90,10 @@
   --brand: oklch(0.53 0.22 295);
   --brand-accent: oklch(0.86 0.2 305);
   --brand-dark: oklch(0.16 0.02 255);
+  --grid-pattern: oklch(0.8 0 0);
+  --gradient-glow-primary: oklch(0.53 0.22 295 / 10%);
+  --gradient-glow-secondary: oklch(0.48 0.24 300 / 10%);
+  --selection: oklch(0.53 0.22 295 / 20%);
 }
 
 .dark {
@@ -123,6 +131,10 @@
   --brand: oklch(0.53 0.22 295);
   --brand-accent: oklch(0.86 0.2 305);
   --brand-dark: oklch(0.16 0.02 255);
+  --grid-pattern: oklch(0.2 0.015 250);
+  --gradient-glow-primary: oklch(0.53 0.22 295 / 10%);
+  --gradient-glow-secondary: oklch(0.48 0.24 300 / 10%);
+  --selection: oklch(0.53 0.22 295 / 30%);
 }
 
 @layer base {

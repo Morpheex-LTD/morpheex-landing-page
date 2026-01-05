@@ -57,10 +57,10 @@ export default function OfficePage() {
         />
 
         {/* Main Content */}
-        <div className="space-y-6 text-sm md:text-base text-slate-300 leading-relaxed mb-20">
+        <div className="space-y-6 text-sm md:text-base text-muted-foreground leading-relaxed mb-20">
           <p className="leading-relaxed">
             Morpheex is not a personality-led agency. We are an{" "}
-            <span className="font-semibold bg-linear-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="font-semibold bg-linear-to-r from-brand to-brand-accent bg-clip-text text-transparent">
               Institutional Partner
             </span>{" "}
             for companies that view infrastructure as a competitive weapon.
@@ -69,7 +69,7 @@ export default function OfficePage() {
             {` The "Architecture Office" serves as our internal
             think-tank where we deconstruct legacy systems and reconstruct them
             using `}
-            <span className="text-purple-400 font-semibold">
+            <span className="text-brand-accent font-semibold">
               AWS Cloud-Native protocols
             </span>
             {`. We don't chase trends—we engineer foundations that outlast
@@ -77,7 +77,7 @@ export default function OfficePage() {
           </p>
           <p className="leading-relaxed">
             {`Our public leadership is focused on `}
-            <span className="text-white font-bold italic underline underline-offset-4 decoration-indigo-500">
+            <span className="text-foreground font-bold italic underline underline-offset-4 decoration-brand">
               Client Strategy & Execution
             </span>
             {`, while our engineering core remains obsessed with code quality,
@@ -90,7 +90,7 @@ export default function OfficePage() {
         {/* Core Principles Grid */}
         <div className="mb-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-            <Users className="w-8 h-8 text-indigo-400" />
+            <Users className="w-8 h-8 text-brand" />
             Our Engineering Principles
           </h2>
           <div className="grid md:grid-cols-2 gap-6">

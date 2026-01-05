@@ -7,19 +7,19 @@ import Value from "@/components/value";
 
 export default function MorpheexLanding() {
   return (
-    <div className="min-h-screen bg-background text-white selection:bg-indigo-500/30">
+    <div className="min-h-screen bg-background text-foreground selection:bg-selection">
       <StructuredData />
       {/* --- GRID & GRADIENT OVERLAY --- */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `radial-gradient(#1e293b 1px, transparent 1px)`,
+            backgroundImage: `radial-gradient(var(--grid-pattern) 1px, transparent 1px)`,
             backgroundSize: "40px 40px",
           }}
         />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] animate-pulse delay-700" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full blur-[120px] animate-pulse bg-gradient-glow-primary" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-[120px] animate-pulse delay-700 bg-gradient-glow-secondary" />
       </div>
 
       {/* --- HERO SECTION --- */}

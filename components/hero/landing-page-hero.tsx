@@ -15,7 +15,7 @@ const LandingPageHero = () => {
   return (
     <section className="relative pt-32 pb-20 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center relative z-10">
-        <Badge className="mb-6 bg-brand/10 text-indigo-300 border-indigo-500/30 px-4 py-2 text-sm hover:bg-indigo-500/20 transition-all cursor-pointer">
+        <Badge className="mb-6 bg-brand/10 text-brand-accent border-brand/30 px-4 py-2 text-sm hover:bg-brand/20 transition-all cursor-pointer">
           <CloudIcon className="w-4 h-4 mr-2 inline" />
           Official AWS Services Partner
         </Badge>
@@ -28,7 +28,7 @@ const LandingPageHero = () => {
           <span className="text-brand">into Future Advantages</span>
         </h1>
 
-        <p className="text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
           Morpheex helps enterprises stop managing technical debt. We engineer
           high-performance software and serverless cloud solutions that scale
           with your vision.
@@ -39,18 +39,18 @@ const LandingPageHero = () => {
             <DialogTrigger asChild>
               <Button
                 size="lg"
-                className="bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all hover:scale-105 group"
+                className="bg-linear-to-r from-brand to-brand-accent hover:opacity-90 shadow-lg shadow-brand/30 hover:shadow-brand/50 transition-all hover:scale-105 group"
               >
                 Start Cloud Audit
                 <ZapIcon className="ml-2 w-4 h-4 group-hover:rotate-12 transition-transform" />
               </Button>
             </DialogTrigger>
-            <DialogContent className="bg-slate-900 border-slate-800">
+            <DialogContent>
               <DialogHeader>
-                <DialogTitle className="text-white">
+                <DialogTitle>
                   Book Your Cloud Audit
                 </DialogTitle>
-                <DialogDescription className="text-slate-400">
+                <DialogDescription>
                   Our architects will review your current AWS setup or legacy
                   stack and provide a modernization roadmap.
                 </DialogDescription>
@@ -62,7 +62,7 @@ const LandingPageHero = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-indigo-500/30 bg-transparent hover:text-indigo-400 hover:border-indigo-400 hover:bg-indigo-500/10 transition-all group"
+            className="border-brand/30 bg-transparent hover:text-brand-accent hover:border-brand hover:bg-brand/10 transition-all group"
           >
             View Our Solutions
             <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

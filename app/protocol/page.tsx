@@ -79,7 +79,7 @@ export default function ProtocolPage() {
         {/* Timeline Steps */}
         <div className="relative mb-20">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500/20 via-indigo-500/20 to-purple-500/20" />
+          <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-brand/20 via-brand-accent/20 to-brand/20" />
 
           <div className="grid lg:grid-cols-4 gap-8 relative z-10">
             {steps.map((step, idx) => (
@@ -98,7 +98,7 @@ export default function ProtocolPage() {
                 {/* Arrow Between Steps (Desktop) */}
                 {idx < steps.length - 1 && (
                   <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
-                    <ArrowRight className="w-8 h-8 text-purple-500/40" />
+                    <ArrowRight className="w-8 h-8 text-brand/40" />
                   </div>
                 )}
               </div>
@@ -107,12 +107,12 @@ export default function ProtocolPage() {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="relative bg-gradient-to-br from-purple-600/20 to-indigo-600/20 border border-purple-500/30 rounded-3xl p-12 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-brand/20 to-brand-accent/20 border border-brand/30 rounded-3xl p-12 overflow-hidden">
           <div className="absolute inset-0 opacity-5">
             <div
               className="w-full h-full"
               style={{
-                backgroundImage: `radial-gradient(circle, #a855f7 1px, transparent 1px)`,
+                backgroundImage: `radial-gradient(circle, var(--brand) 1px, transparent 1px)`,
                 backgroundSize: "24px 24px",
               }}
             />
@@ -122,7 +122,7 @@ export default function ProtocolPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Start Your Transformation?
             </h2>
-            <p className="text-slate-300 text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
               Every successful cloud migration starts with understanding your
               unique infrastructure. Book a free consultation to begin your
               morphing journey.
@@ -130,14 +130,14 @@ export default function ProtocolPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 type="button"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 rounded-full font-bold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all hover:scale-105 flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-brand to-brand-accent hover:opacity-90 rounded-full font-bold text-primary-foreground shadow-lg shadow-brand/30 hover:shadow-brand/50 transition-all hover:scale-105 flex items-center gap-2"
               >
                 <Rocket className="w-5 h-5" />
                 Start Discovery Phase
               </button>
               <button
                 type="button"
-                className="px-8 py-4 border border-purple-500/30 bg-transparent hover:bg-purple-500/10 rounded-full font-semibold text-white transition-all flex items-center gap-2"
+                className="px-8 py-4 border border-brand/30 bg-transparent hover:bg-brand/10 rounded-full font-semibold text-foreground transition-all flex items-center gap-2"
               >
                 View Case Studies
                 <ArrowRight className="w-5 h-5" />

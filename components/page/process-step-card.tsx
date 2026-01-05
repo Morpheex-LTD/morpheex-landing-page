@@ -22,7 +22,7 @@ export function ProcessStepCard({
   duration,
 }: ProcessStepCardProps) {
   return (
-    <div className="group bg-slate-900/80 backdrop-blur-sm border border-white/5 rounded-3xl p-8 hover:border-purple-500/40 transition-all duration-500 hover:scale-105 h-full flex flex-col">
+    <div className="group bg-card/80 backdrop-blur-sm border rounded-3xl p-8 hover:border-brand/40 transition-all duration-500 hover:scale-105 h-full flex flex-col">
       {/* Gradient Glow on Hover */}
       <div
         className={`absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-30 blur-3xl transition-opacity duration-500`}
@@ -33,7 +33,7 @@ export function ProcessStepCard({
         <div
           className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}
         >
-          <Icon className="w-8 h-8 text-white" />
+          <Icon className="w-8 h-8 text-primary-foreground" />
         </div>
 
         {/* Number & Label */}
@@ -42,21 +42,21 @@ export function ProcessStepCard({
         >
           {id}
         </div>
-        <div className="text-xs font-bold text-purple-400 uppercase tracking-widest mb-2">
+        <div className="text-xs font-bold text-brand-accent uppercase tracking-widest mb-2">
           {label}
         </div>
-        <h3 className="text-2xl font-bold mb-4 text-white">{title}</h3>
+        <h3 className="text-2xl font-bold mb-4 text-foreground">{title}</h3>
 
         {/* Description */}
-        <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+        <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
           {description}
         </p>
 
         {/* Deliverables */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-3">
-            <ClipboardCheck className="w-4 h-4 text-indigo-400" />
-            <span className="text-xs font-semibold text-slate-300 uppercase tracking-wide">
+            <ClipboardCheck className="w-4 h-4 text-brand" />
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
               Deliverables
             </span>
           </div>
@@ -64,9 +64,9 @@ export function ProcessStepCard({
             {deliverables.map((item, i) => (
               <li
                 key={i}
-                className="flex items-start gap-2 text-xs text-slate-400"
+                className="flex items-start gap-2 text-xs text-muted-foreground"
               >
-                <CheckCircle2 className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
+                <CheckCircle2 className="w-3 h-3 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
                 <span>{item}</span>
               </li>
             ))}
@@ -74,9 +74,9 @@ export function ProcessStepCard({
         </div>
 
         {/* Duration Badge */}
-        <div className="flex items-center gap-2 pt-4 border-t border-white/5">
-          <BarChart3 className="w-4 h-4 text-slate-500" />
-          <span className="text-xs text-slate-500 font-mono">{duration}</span>
+        <div className="flex items-center gap-2 pt-4 border-t">
+          <BarChart3 className="w-4 h-4 text-muted-foreground" />
+          <span className="text-xs text-muted-foreground font-mono">{duration}</span>
         </div>
       </div>
     </div>
