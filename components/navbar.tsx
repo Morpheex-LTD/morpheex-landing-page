@@ -29,11 +29,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "Home" },
+    { href: "/services", label: "Services" },
+    { href: "/products", label: "Morphlix" },
+    { href: "/blog", label: "Blog" },
+    { href: "/calculator", label: "Calculator" },
     { href: "/about", label: "About" },
-    { href: "/protocol", label: "Protocol" },
-    { href: "/success", label: "Success" },
-    { href: "/contact", label: "Contact" },
+    { href: "/portal", label: "Portal" },
   ];
 
   const isActive = (href: string) => {

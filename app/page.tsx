@@ -1,6 +1,8 @@
 import { CaseStudy } from "@/components/case-study";
 import { FAQ } from "@/components/faq/faq";
 import LandingPageHero from "@/components/hero/landing-page-hero";
+import { ClientLogos } from "@/components/logos/client-logos";
+import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
 import ReadyToMorph from "@/components/ready-to-morph";
 import Services from "@/components/services";
 import { StructuredData } from "@/components/structured-data";
@@ -82,6 +84,13 @@ export default function MorpheexLanding() {
       {/* --- HERO SECTION --- */}
       <LandingPageHero />
 
+      {/* --- CLIENT LOGOS --- */}
+      <div className="relative z-10">
+        <div className="container mx-auto px-6">
+          <ClientLogos />
+        </div>
+      </div>
+
       {/* --- THE MULTIPLIER EFFECT (Bento Grid) --- */}
       <Services />
 
@@ -103,6 +112,16 @@ export default function MorpheexLanding() {
           <FAQ
             items={faqs}
             subtitle="Everything you need to know about working with Morpheex"
+          />
+        </div>
+      </div>
+
+      {/* --- NEWSLETTER SIGNUP --- */}
+      <div className="relative z-10 py-12">
+        <div className="container mx-auto px-6 max-w-xl">
+          <NewsletterSignup
+            title="Get Cloud Insights"
+            description="Weekly tips on AWS optimization, serverless architecture, and cloud cost management. Join 5,000+ engineers."
           />
         </div>
       </div>

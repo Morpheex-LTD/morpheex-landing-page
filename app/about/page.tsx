@@ -1,5 +1,6 @@
 import { FAQ } from "@/components/faq/faq";
 import { PageContainer, PageHeader, StatsCard, StatsGrid } from "@/components/page";
+import { TeamMember, TeamMemberCard } from "@/components/team/team-member-card";
 import { Badge } from "@/components/ui/badge";
 import { Award, Users, Zap, Shield, TrendingUp, Rocket } from "lucide-react";
 import type { Metadata } from "next";
@@ -37,21 +38,71 @@ export default function AboutPage() {
     },
   ];
 
-  const team = [
+  const teamMembers: TeamMember[] = [
     {
-      role: "Solutions Architecture",
-      description: "AWS-certified architects with 10+ years cloud experience",
-      certifications: "14+ AWS certifications",
+      name: "David Okonkwo",
+      role: "Principal Cloud Architect",
+      bio: "AWS Hero and Solutions Architect with 12+ years of cloud experience. Led migrations for Fortune 500 companies, reducing infrastructure costs by $10M+.",
+      certifications: ["AWS Solutions Architect Pro", "AWS DevOps Pro", "AWS Security"],
+      skills: ["Serverless", "Kubernetes", "Terraform", "Cost Optimization"],
+      social: {
+        linkedin: "https://linkedin.com",
+        twitter: "https://twitter.com",
+        github: "https://github.com",
+      },
     },
     {
-      role: "DevOps Engineering",
-      description: "Infrastructure-as-code specialists and automation experts",
-      certifications: "Kubernetes, Terraform, GitHub Actions",
+      name: "Sarah Chen",
+      role: "Lead Solutions Architect",
+      bio: "Former AWS engineer specializing in serverless architectures and event-driven systems. Built real-time platforms processing 1M+ events/second.",
+      certifications: ["AWS Solutions Architect Pro", "AWS Data Analytics", "Kubernetes CKA"],
+      skills: ["Lambda", "EventBridge", "DynamoDB", "System Design"],
+      social: {
+        linkedin: "https://linkedin.com",
+        github: "https://github.com",
+      },
     },
     {
-      role: "Full-Stack Development",
-      description: "Next.js, Node.js, and serverless application experts",
-      certifications: "React, TypeScript, Lambda, DynamoDB",
+      name: "Chidi Nwosu",
+      role: "DevOps Lead",
+      bio: "Infrastructure-as-code expert who has automated deployment pipelines for 100+ applications. Believes in GitOps and zero-touch deployments.",
+      certifications: ["AWS DevOps Pro", "Terraform Associate", "Kubernetes CKD"],
+      skills: ["CI/CD", "GitHub Actions", "ArgoCD", "Monitoring"],
+      social: {
+        linkedin: "https://linkedin.com",
+        github: "https://github.com",
+      },
+    },
+    {
+      name: "Amara Obi",
+      role: "Security Engineer",
+      bio: "Cloud security specialist focused on compliance and threat detection. Has secured systems handling PCI and HIPAA workloads.",
+      certifications: ["AWS Security Specialty", "CISSP", "SOC2 Auditor"],
+      skills: ["IAM", "GuardDuty", "Security Hub", "Compliance"],
+      social: {
+        linkedin: "https://linkedin.com",
+      },
+    },
+    {
+      name: "Michael Adeyemi",
+      role: "Full-Stack Developer",
+      bio: "Senior engineer building scalable web applications with Next.js and Node.js. Passionate about developer experience and clean code.",
+      certifications: ["AWS Developer Associate", "AWS Serverless"],
+      skills: ["Next.js", "React", "Node.js", "TypeScript"],
+      social: {
+        linkedin: "https://linkedin.com",
+        github: "https://github.com",
+      },
+    },
+    {
+      name: "Fatima Bello",
+      role: "Data Engineer",
+      bio: "Data platform engineer specializing in AWS analytics services. Builds data lakes and real-time pipelines for actionable insights.",
+      certifications: ["AWS Data Analytics", "AWS Machine Learning", "Databricks"],
+      skills: ["Glue", "Athena", "Redshift", "Spark"],
+      social: {
+        linkedin: "https://linkedin.com",
+      },
     },
   ];
 
@@ -137,36 +188,24 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Team Expertise */}
+        {/* Team Members */}
         <div className="mb-20">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-brand-accent/10 text-brand-accent border-brand-accent/30">
               <Users className="w-4 h-4 mr-2 inline" />
-              Expert Team
+              Meet The Team
             </Badge>
-            <h2 className="text-3xl font-bold text-foreground">
-              World-Class Expertise
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              World-Class Cloud Experts
             </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Our team brings together AWS-certified architects, DevOps engineers,
+              and full-stack developers with decades of combined experience.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, i) => (
-              <div
-                key={i}
-                className="bg-gradient-to-br from-card/80 to-card/50 border rounded-2xl p-8 text-center"
-              >
-                <div className="text-5xl font-black text-brand/20 mb-4">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
-                  {member.role}
-                </h3>
-                <p className="text-muted-foreground mb-4 text-sm">
-                  {member.description}
-                </p>
-                <Badge variant="secondary" className="text-xs">
-                  {member.certifications}
-                </Badge>
-              </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {teamMembers.map((member) => (
+              <TeamMemberCard key={member.name} member={member} />
             ))}
           </div>
         </div>

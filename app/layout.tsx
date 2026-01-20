@@ -1,5 +1,8 @@
+import { CrispChat } from "@/components/chat/crisp-chat";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { SocialProofToast } from "@/components/notifications/social-proof-toast";
+import { ExitIntentPopup } from "@/components/popups/exit-intent-popup";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
@@ -113,6 +116,12 @@ export default function RootLayout({
 
           {children}
           <Footer />
+
+          {/* Engagement Features */}
+          <CrispChat />
+          <ExitIntentPopup />
+          <SocialProofToast />
+
           <Analytics />
         </ThemeProvider>
       </body>

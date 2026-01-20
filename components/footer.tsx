@@ -13,7 +13,34 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="space-y-4">
+              <h5 className="text-foreground font-bold text-xs uppercase tracking-widest">
+                Services
+              </h5>
+              <ul className="text-muted-foreground space-y-2 text-sm">
+                <li>
+                  <a href="/services" className="hover:text-foreground transition-colors">
+                    All Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/cloud-modernization" className="hover:text-foreground transition-colors">
+                    Cloud Modernization
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/full-stack-development" className="hover:text-foreground transition-colors">
+                    Full-Stack Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/ai-data-strategy" className="hover:text-foreground transition-colors">
+                    AI & Data Strategy
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div className="space-y-4">
               <h5 className="text-foreground font-bold text-xs uppercase tracking-widest">
                 Company
@@ -25,13 +52,18 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/protocol" className="hover:text-foreground transition-colors">
-                    Our Process
+                  <a href="/success" className="hover:text-foreground transition-colors">
+                    Case Studies
                   </a>
                 </li>
                 <li>
-                  <a href="/success" className="hover:text-foreground transition-colors">
-                    Case Studies
+                  <a href="/blog" className="hover:text-foreground transition-colors">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="/compare" className="hover:text-foreground transition-colors">
+                    Why Morpheex
                   </a>
                 </li>
                 <li>
@@ -43,27 +75,27 @@ const Footer = () => {
             </div>
             <div className="space-y-4">
               <h5 className="text-foreground font-bold text-xs uppercase tracking-widest">
-                Services
+                Tools
               </h5>
               <ul className="text-muted-foreground space-y-2 text-sm">
                 <li>
-                  <a href="/#services" className="hover:text-foreground transition-colors">
-                    Cloud Modernization
+                  <a href="/products" className="hover:text-foreground transition-colors">
+                    Morphlix Products
                   </a>
                 </li>
                 <li>
-                  <a href="/#services" className="hover:text-foreground transition-colors">
-                    Full-Stack Development
+                  <a href="/calculator" className="hover:text-foreground transition-colors">
+                    Cost Calculator
                   </a>
                 </li>
                 <li>
-                  <a href="/#services" className="hover:text-foreground transition-colors">
-                    AI & Data Strategy
+                  <a href="/apply" className="hover:text-foreground transition-colors">
+                    AWS Credits
                   </a>
                 </li>
                 <li>
-                  <a href="/#services" className="hover:text-foreground transition-colors">
-                    AWS Consulting
+                  <a href="/pricing" className="hover:text-foreground transition-colors">
+                    Pricing
                   </a>
                 </li>
               </ul>
@@ -81,6 +113,11 @@ const Footer = () => {
                 <li>
                   <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
                     GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
+                    Twitter
                   </a>
                 </li>
                 <li>
