@@ -1,317 +1,201 @@
-import { Product, ProductCard } from "@/components/products/product-card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
-  Boxes,
-  Code2,
-  Cpu,
-  Globe,
-  Layers,
-  Rocket,
-  Sparkles,
-  Zap,
+  BarChart3,
+  CheckCircle,
+  Gauge,
+  GitBranch,
+  Shield,
 } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Morphlix Products | Software Solutions by Morpheex",
+  title: "Products | Morphlix AWS Tools",
   description:
-    "Discover Morphlix - innovative software products built by Morpheex. From developer tools to enterprise solutions, explore our suite of cloud-native applications.",
-  openGraph: {
-    title: "Morphlix Products | Software Solutions by Morpheex",
-    description:
-      "Discover Morphlix - innovative software products built by Morpheex. Cloud-native applications and developer tools.",
-  },
+    "Explore Morphlix products: CloudPulse monitoring, CostGuard optimization, DeployKit CI/CD, and SecureStack security scanning for AWS.",
 };
 
-const products: Product[] = [
+const products = [
   {
-    id: "cloudpulse",
+    slug: "cloudpulse",
     name: "CloudPulse",
-    tagline: "Real-time AWS Cost Intelligence",
+    tagline: "Real-time infrastructure monitoring",
     description:
-      "Monitor, analyze, and optimize your AWS spending in real-time. Get instant alerts on cost anomalies, AI-powered recommendations, and detailed breakdowns by service, team, or project.",
-    image: "/products/cloudpulse.png",
-    category: "FinOps",
-    status: "live",
+      "Monitor your AWS resources in real-time. Get intelligent alerts before issues become outages. Track performance metrics across EC2, Lambda, RDS, and more.",
+    icon: Gauge,
+    status: "Live",
     features: [
-      "Real-time cost monitoring dashboard",
-      "AI-powered optimization recommendations",
-      "Custom alerts and budgets",
-      "Team-based cost allocation",
-      "Slack & Teams integration",
+      "Real-time AWS resource monitoring",
+      "Intelligent alerting with anomaly detection",
+      "Custom dashboards and metrics",
+      "Slack and PagerDuty integrations",
+      "30-day metric retention",
     ],
-    link: "/products/cloudpulse",
-    demoLink: "https://demo.cloudpulse.morphlix.com",
+    cta: "Start Monitoring",
   },
   {
-    id: "deploykit",
+    slug: "costguard",
+    name: "CostGuard",
+    tagline: "AWS cost optimization",
+    description:
+      "Identify waste, right-size resources, and cut your AWS bill by up to 60%. Get actionable recommendations backed by usage data.",
+    icon: BarChart3,
+    status: "Live",
+    features: [
+      "Automated cost anomaly detection",
+      "Right-sizing recommendations",
+      "Reserved Instance planning",
+      "Tag compliance monitoring",
+      "Monthly savings reports",
+    ],
+    cta: "Cut Your Costs",
+  },
+  {
+    slug: "deploykit",
     name: "DeployKit",
-    tagline: "Zero-Config CI/CD for AWS",
+    tagline: "One-click CI/CD pipelines",
     description:
-      "Deploy to AWS with a single command. DeployKit handles infrastructure provisioning, containerization, and CI/CD pipelines automatically. Built for teams who want to ship faster.",
-    image: "/products/deploykit.png",
-    category: "DevOps",
-    status: "live",
+      "Production-ready deployment pipelines for AWS. Zero config, instant setup. Deploy to ECS, Lambda, or EKS in minutes.",
+    icon: GitBranch,
+    status: "Beta",
     features: [
-      "One-command deployments",
-      "Auto-generated infrastructure",
-      "Built-in preview environments",
-      "GitHub & GitLab integration",
+      "Zero-config pipeline setup",
+      "GitHub and GitLab integration",
+      "Blue-green deployments",
       "Automatic rollbacks",
+      "Deploy previews for PRs",
     ],
-    link: "/products/deploykit",
-    demoLink: "https://demo.deploykit.morphlix.com",
+    cta: "Join Beta",
   },
   {
-    id: "serverless-studio",
-    name: "Serverless Studio",
-    tagline: "Visual Serverless Architecture Builder",
-    description:
-      "Design, visualize, and deploy serverless architectures with a drag-and-drop interface. Export to CloudFormation, Terraform, or CDK. Perfect for architects and developers alike.",
-    image: "/products/serverless-studio.png",
-    category: "Developer Tools",
-    status: "beta",
-    features: [
-      "Visual architecture designer",
-      "Export to IaC formats",
-      "Real-time cost estimation",
-      "Architecture templates library",
-      "Team collaboration",
-    ],
-    link: "/products/serverless-studio",
-  },
-  {
-    id: "api-forge",
-    name: "API Forge",
-    tagline: "API Development Platform",
-    description:
-      "Build, test, and deploy APIs at lightning speed. API Forge provides auto-generated documentation, mock servers, and seamless integration with your existing workflow.",
-    image: "/products/api-forge.png",
-    category: "Developer Tools",
-    status: "live",
-    features: [
-      "Visual API builder",
-      "Auto-generated OpenAPI docs",
-      "Mock server generation",
-      "Request/response validation",
-      "Performance testing built-in",
-    ],
-    link: "/products/api-forge",
-    demoLink: "https://demo.apiforge.morphlix.com",
-  },
-  {
-    id: "dataflow",
-    name: "DataFlow",
-    tagline: "ETL Pipelines Made Simple",
-    description:
-      "Build data pipelines visually without writing code. Connect to 100+ data sources, transform data with drag-and-drop, and orchestrate workflows with built-in scheduling.",
-    image: "/products/dataflow.png",
-    category: "Data",
-    status: "beta",
-    features: [
-      "Visual pipeline builder",
-      "100+ pre-built connectors",
-      "No-code transformations",
-      "Scheduled orchestration",
-      "Data quality monitoring",
-    ],
-    link: "/products/dataflow",
-  },
-  {
-    id: "securestack",
+    slug: "securestack",
     name: "SecureStack",
-    tagline: "Cloud Security Posture Management",
+    tagline: "AWS security posture",
     description:
-      "Continuous security monitoring for your AWS infrastructure. Detect misconfigurations, compliance violations, and security threats before they become incidents.",
-    image: "/products/securestack.png",
-    category: "Security",
-    status: "coming-soon",
+      "Continuous security scanning and compliance monitoring for your AWS accounts. Stay ahead of vulnerabilities and meet compliance requirements.",
+    icon: Shield,
+    status: "Coming Soon",
     features: [
-      "Continuous compliance monitoring",
-      "Misconfiguration detection",
-      "Threat intelligence integration",
-      "Automated remediation",
-      "SOC2 & HIPAA reports",
+      "Continuous security scanning",
+      "CIS benchmark compliance",
+      "IAM policy analysis",
+      "S3 bucket auditing",
+      "SOC2 and HIPAA reports",
     ],
-    link: "/products/securestack",
+    cta: "Join Waitlist",
   },
-];
-
-const categories = [
-  { name: "All", icon: Boxes },
-  { name: "FinOps", icon: Zap },
-  { name: "DevOps", icon: Rocket },
-  { name: "Developer Tools", icon: Code2 },
-  { name: "Data", icon: Layers },
-  { name: "Security", icon: Globe },
 ];
 
 export default function ProductsPage() {
-  const featuredProduct = products[0];
-  const otherProducts = products.slice(1);
-
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[120px] bg-brand/20" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-[120px] bg-brand-accent/20" />
-        </div>
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          {/* Badge */}
-          <div className="flex justify-center gap-2 mb-6">
-            <Badge
-              variant="outline"
-              className="px-4 py-2 text-sm font-medium bg-brand/10 border-brand/20 text-brand"
-            >
-              <Sparkles className="w-4 h-4 mr-2" />
-              Morphlix Product Suite
-            </Badge>
-            <Badge
-              variant="outline"
-              className="px-4 py-2 text-sm font-medium bg-green-500/10 border-green-500/20 text-green-500"
-            >
-              100% Free
-            </Badge>
-          </div>
-
-          {/* Heading */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Software Products by{" "}
-              <span className="bg-gradient-to-r from-brand to-brand-accent bg-clip-text text-transparent">
-                Morphlix
-              </span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Cloud-native tools and platforms built by the Morpheex team — completely free to use.
-              From cost optimization to deployment automation, we build the tools we wished existed.
-            </p>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-            {[
-              { value: "6", label: "Free Products" },
-              { value: "10K+", label: "Active Users" },
-              { value: "99.9%", label: "Uptime" },
-              { value: "$0", label: "Forever Free" },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="bg-card/50 border rounded-xl p-4 text-center"
-              >
-                <p className="text-2xl md:text-3xl font-bold text-brand">
-                  {stat.value}
-                </p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Product */}
-      <section className="py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-2 mb-6">
-            <Cpu className="w-5 h-5 text-brand" />
-            <h2 className="text-lg font-semibold">Featured Product</h2>
-          </div>
-          <ProductCard product={featuredProduct} featured />
-        </div>
-      </section>
-
-      {/* All Products */}
-      <section className="py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          {/* Category Filter */}
-          <div className="flex items-center justify-between flex-wrap gap-4 mb-8">
-            <h2 className="text-2xl font-bold">All Products</h2>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => {
-                const Icon = category.icon;
-                return (
-                  <Button
-                    key={category.name}
-                    variant={category.name === "All" ? "default" : "outline"}
-                    size="sm"
-                    className={
-                      category.name === "All"
-                        ? "bg-brand hover:bg-brand/90"
-                        : ""
-                    }
-                  >
-                    <Icon className="w-4 h-4 mr-1" />
-                    {category.name}
-                  </Button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Product Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-brand/10 to-brand-accent/10 border border-brand/20 rounded-2xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Have a product idea?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We&apos;re always looking for the next challenge. If you have an idea
-              for a cloud tool or need a custom solution, let&apos;s talk.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-gradient-to-r from-brand to-brand-accent hover:opacity-90"
-              >
-                <Link href="/contact">
-                  Start a Conversation
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/apply">Apply for AWS Credits</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-12 px-4 border-t">
-        <div className="max-w-2xl mx-auto text-center">
-          <h3 className="text-xl font-semibold mb-2">Stay Updated</h3>
-          <p className="text-muted-foreground mb-6">
-            Get notified when we launch new products and features.
+    <main className="min-h-screen pt-28 pb-20 px-6">
+      <div className="max-w-5xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-14">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Our Products
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Tools built from real client challenges. Each product solves a
+            problem we&apos;ve seen dozens of times.
           </p>
-          <form className="flex gap-2 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="you@company.com"
-              className="flex-1 h-10 px-4 rounded-lg border bg-card text-sm focus:outline-none focus:ring-2 focus:ring-brand/50"
-            />
-            <Button className="bg-brand hover:bg-brand/90">Subscribe</Button>
-          </form>
         </div>
-      </section>
+
+        {/* Products */}
+        <div className="space-y-8">
+          {products.map((product) => {
+            const Icon = product.icon;
+            return (
+              <div
+                key={product.slug}
+                className="bg-card border rounded-xl overflow-hidden"
+              >
+                <div className="grid md:grid-cols-2">
+                  {/* Content */}
+                  <div className="p-6 md:p-8">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center">
+                        <Icon className="w-6 h-6 text-brand" />
+                      </div>
+                      <span
+                        className={`text-xs font-medium px-2 py-1 rounded-full ${
+                          product.status === "Live"
+                            ? "bg-green-500/10 text-green-600"
+                            : product.status === "Beta"
+                              ? "bg-brand/10 text-brand"
+                              : "bg-muted text-muted-foreground"
+                        }`}
+                      >
+                        {product.status}
+                      </span>
+                    </div>
+
+                    <h2 className="text-2xl font-bold text-foreground mb-1">
+                      {product.name}
+                    </h2>
+                    <p className="text-sm text-brand font-medium mb-3">
+                      {product.tagline}
+                    </p>
+                    <p className="text-muted-foreground text-sm mb-5">
+                      {product.description}
+                    </p>
+
+                    <Button
+                      asChild
+                      className={
+                        product.status === "Coming Soon"
+                          ? "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                          : "bg-brand hover:bg-brand-dark"
+                      }
+                    >
+                      <Link href={`/contact?product=${product.slug}`}>
+                        {product.cta}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                  </div>
+
+                  {/* Features */}
+                  <div className="bg-muted/30 p-6 md:p-8">
+                    <h3 className="font-semibold text-foreground mb-4">
+                      Key Features
+                    </h3>
+                    <ul className="space-y-3">
+                      {product.features.map((feature) => (
+                        <li
+                          key={feature}
+                          className="flex items-start gap-2 text-sm text-muted-foreground"
+                        >
+                          <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* CTA */}
+        <div className="mt-16 bg-card border rounded-xl p-8 text-center">
+          <h2 className="text-2xl font-bold mb-3 text-foreground">
+            Need a custom solution?
+          </h2>
+          <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+            Our products are built on the same expertise we bring to client
+            projects. Let&apos;s discuss your specific needs.
+          </p>
+          <Button asChild className="bg-brand hover:bg-brand-dark">
+            <Link href="/contact">
+              Talk to Us
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
+        </div>
+      </div>
     </main>
   );
 }

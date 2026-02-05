@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 interface Testimonial {
   quote: string;
@@ -23,11 +23,11 @@ export function Testimonials({
 }: TestimonialsProps) {
   return (
     <section className="py-20">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         {(title || subtitle) && (
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             {title && (
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
                 {title}
               </h2>
             )}
@@ -39,49 +39,46 @@ export function Testimonials({
           </div>
         )}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-card/80 to-card/50 border rounded-3xl p-8 hover:border-brand/30 transition-all hover:-translate-y-1 relative group"
+              className="bg-card border rounded-xl p-6 hover:border-brand/30 transition-colors"
             >
-              {/* Quote Icon */}
-              <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Quote className="w-12 h-12 text-brand" />
-              </div>
-
               {/* Rating */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-0.5 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className="w-4 h-4 fill-yellow-500 dark:fill-yellow-400 text-yellow-500 dark:text-yellow-400"
+                    className="w-4 h-4 fill-amber-400 text-amber-400"
                   />
                 ))}
               </div>
 
               {/* Quote */}
-              <blockquote className="text-muted-foreground mb-6 leading-relaxed relative z-10">
+              <blockquote className="text-muted-foreground text-sm mb-5 leading-relaxed">
                 "{testimonial.quote}"
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand to-brand-accent flex items-center justify-center text-primary-foreground font-bold">
+              <div className="flex items-center gap-3">
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                  style={{
+                    background: `linear-gradient(135deg, hsl(${(index * 60 + 270) % 360}, 70%, 45%), hsl(${(index * 60 + 300) % 360}, 70%, 55%))`,
+                  }}
+                >
                   {testimonial.author
                     .split(" ")
                     .map((n) => n[0])
                     .join("")}
                 </div>
                 <div>
-                  <div className="font-bold text-foreground">
+                  <div className="font-semibold text-foreground text-sm">
                     {testimonial.author}
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    {testimonial.role}
-                  </div>
                   <div className="text-xs text-muted-foreground">
-                    {testimonial.company}
+                    {testimonial.role}, {testimonial.company}
                   </div>
                 </div>
               </div>
@@ -90,7 +87,7 @@ export function Testimonials({
               {testimonial.industry && (
                 <Badge
                   variant="secondary"
-                  className="mt-4 text-xs bg-brand/10 text-brand border-brand/20"
+                  className="mt-4 text-xs"
                 >
                   {testimonial.industry}
                 </Badge>

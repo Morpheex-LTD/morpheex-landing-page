@@ -99,13 +99,13 @@ export default function FullStackDevelopmentPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-purple-500/10 text-purple-500 border-purple-500/20">
+              <Badge className="mb-4 bg-brand/10 text-brand border-brand/20">
                 <Code2 className="w-4 h-4 mr-2" />
                 Full-Stack Development
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Build{" "}
-                <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                <span className="text-brand">
                   High-Performance
                 </span>{" "}
                 Applications
@@ -119,7 +119,7 @@ export default function FullStackDevelopmentPage() {
               <div className="flex flex-wrap gap-4 mb-8">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90"
+                  className="bg-brand hover:bg-brand-dark"
                   asChild
                 >
                   <Link href="/contact">
@@ -128,7 +128,7 @@ export default function FullStackDevelopmentPage() {
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="/success">View Case Studies</Link>
+                  <Link href="/#case-study">View Case Study</Link>
                 </Button>
               </div>
 
@@ -159,7 +159,7 @@ export default function FullStackDevelopmentPage() {
                   key={stat.label}
                   className="bg-card border rounded-xl p-6 text-center"
                 >
-                  <p className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  <p className="text-3xl font-bold text-brand">
                     {stat.value}
                   </p>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -185,7 +185,7 @@ export default function FullStackDevelopmentPage() {
           <div className="grid md:grid-cols-4 gap-6">
             {techStack.map((stack) => (
               <div key={stack.category} className="bg-card border rounded-xl p-6">
-                <h3 className="font-bold mb-4 text-purple-500">
+                <h3 className="font-bold mb-4 text-brand">
                   {stack.category}
                 </h3>
                 <ul className="space-y-2">
@@ -194,7 +194,7 @@ export default function FullStackDevelopmentPage() {
                       key={item}
                       className="text-sm text-muted-foreground flex items-center gap-2"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand" />
                       {item}
                     </li>
                   ))}
@@ -222,10 +222,10 @@ export default function FullStackDevelopmentPage() {
               return (
                 <div
                   key={capability.title}
-                  className="bg-card border rounded-xl p-6 hover:border-purple-500/30 transition-colors"
+                  className="bg-card border rounded-xl p-6 hover:border-brand/30 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-purple-500" />
+                  <div className="w-12 h-12 rounded-lg bg-brand/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-brand" />
                   </div>
                   <h3 className="font-bold mb-2">{capability.title}</h3>
                   <p className="text-sm text-muted-foreground">

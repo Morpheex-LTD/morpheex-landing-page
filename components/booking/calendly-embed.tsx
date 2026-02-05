@@ -20,7 +20,7 @@ interface CalendlyEmbedProps {
 }
 
 export function CalendlyEmbed({
-  url = "https://calendly.com/morpheex/30min",
+  url = "https://calendly.com/Morphlix/30min",
   buttonText = "Book a Call",
   buttonVariant = "default",
   showInline = false,
@@ -37,7 +37,7 @@ export function CalendlyEmbed({
     return () => {
       // Cleanup script on unmount
       const existingScript = document.querySelector(
-        'script[src="https://assets.calendly.com/assets/external/widget.js"]'
+        'script[src="https://assets.calendly.com/assets/external/widget.js"]',
       );
       if (existingScript) {
         existingScript.remove();

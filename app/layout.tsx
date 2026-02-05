@@ -21,14 +21,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://morpheex.com"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://Morphlix.com",
   ),
   title: {
-    default: "Morpheex | Transform Legacy Systems into Future Advantages",
-    template: "%s | Morpheex",
+    default: "Morphlix | Transform Legacy Systems into Future Advantages",
+    template: "%s | Morphlix",
   },
   description:
-    "Morpheex helps enterprises modernize legacy systems with high-performance software and serverless cloud solutions. Official AWS Partner specializing in cloud migration and technical debt elimination.",
+    "Morphlix helps enterprises modernize legacy systems with high-performance software and serverless cloud solutions. Official AWS Partner specializing in cloud migration and technical debt elimination.",
   keywords: [
     "cloud migration",
     "AWS partner",
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     "AWS consulting",
     "system modernization",
   ],
-  authors: [{ name: "Morpheex" }],
-  creator: "Morpheex",
-  publisher: "Morpheex",
+  authors: [{ name: "Morphlix" }],
+  creator: "Morphlix",
+  publisher: "Morphlix",
   robots: {
     index: true,
     follow: true,
@@ -59,8 +59,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Morpheex",
-    title: "Morpheex | Transform Legacy Systems into Future Advantages",
+    siteName: "Morphlix",
+    title: "Morphlix | Transform Legacy Systems into Future Advantages",
     description:
       "Enterprise cloud modernization and serverless solutions. Official AWS Partner helping businesses eliminate technical debt.",
     images: [
@@ -68,17 +68,17 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Morpheex - Cloud Modernization Experts",
+        alt: "Morphlix - Cloud Modernization Experts",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Morpheex | Transform Legacy Systems into Future Advantages",
+    title: "Morphlix | Transform Legacy Systems into Future Advantages",
     description:
       "Enterprise cloud modernization and serverless solutions. Official AWS Partner helping businesses eliminate technical debt.",
     images: ["/og-image.png"],
-    creator: "@morpheex",
+    creator: "@Morphlix",
   },
   icons: {
     icon: [

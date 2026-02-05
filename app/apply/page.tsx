@@ -4,11 +4,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Apply for AWS Credits",
   description:
-    "Apply for AWS credits through Morpheex, an official AWS Advanced Partner. Get up to $50,000 in cloud credits for your startup or enterprise.",
+    "Apply for AWS credits through Morphlix, an official AWS Advanced Partner. Get up to $50,000 in cloud credits for your startup or enterprise.",
   openGraph: {
-    title: "Apply for AWS Credits | Morpheex",
+    title: "Apply for AWS Credits | Morphlix",
     description:
-      "Apply for AWS credits through Morpheex, an official AWS Advanced Partner. Get up to $50,000 in cloud credits.",
+      "Apply for AWS credits through Morphlix, an official AWS Advanced Partner. Get up to $50,000 in cloud credits.",
   },
 };
 

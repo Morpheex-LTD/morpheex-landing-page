@@ -6,11 +6,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Cloud Cost Calculator | Estimate Your AWS Savings",
   description:
-    "Calculate your potential AWS cost savings with Morpheex. Get instant estimates based on your current cloud spend and see how much you could save.",
+    "Calculate your potential AWS cost savings with Morphlix. Get instant estimates based on your current cloud spend and see how much you could save.",
   openGraph: {
-    title: "Cloud Cost Calculator | Morpheex",
+    title: "Cloud Cost Calculator | Morphlix",
     description:
-      "Calculate your potential AWS cost savings with Morpheex. Get instant estimates based on your current cloud spend.",
+      "Calculate your potential AWS cost savings with Morphlix. Get instant estimates based on your current cloud spend.",
   },
 };
 

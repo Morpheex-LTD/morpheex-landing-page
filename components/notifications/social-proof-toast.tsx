@@ -178,7 +178,9 @@ export function SocialProofToast({
               {/* Content */}
               <div className="flex-1 min-w-0">
                 <p className="text-sm">
-                  <span className="font-semibold">{currentNotification.name}</span>
+                  <span className="font-semibold">
+                    {currentNotification.name}
+                  </span>
                   {currentNotification.company && (
                     <span className="text-muted-foreground">
                       {" "}
@@ -200,7 +202,7 @@ export function SocialProofToast({
             <div className="flex items-center gap-1 mt-2 pt-2 border-t">
               <CheckCircle className="w-3 h-3 text-green-500" />
               <span className="text-xs text-muted-foreground">
-                Verified by Morpheex
+                Verified by Morphlix
               </span>
             </div>
           </div>

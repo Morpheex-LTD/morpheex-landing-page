@@ -19,7 +19,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Cloud Modernization Services | AWS Migration & Serverless",
   description:
-    "Transform legacy systems to cloud-native architecture. Zero-downtime AWS migrations, serverless architecture, Kubernetes orchestration. 60% average cost reduction.",
+    "Transform legacy systems to cloud-native AWS architecture. Zero-downtime migrations, serverless architecture, Kubernetes orchestration. 60% average cost reduction.",
 };
 
 const capabilities = [
@@ -102,7 +102,7 @@ const faqs = [
   {
     question: "Do you support hybrid cloud setups?",
     answer:
-      "Yes. We work with AWS Outposts, Direct Connect, and VPN configurations. Many clients maintain on-premise systems for specific workloads while leveraging cloud for scalable components.",
+      "Yes. We work with AWS Outposts, Direct Connect, and VPN configurations. Many clients maintain on-premise systems for specific workloads while leveraging AWS for scalable components.",
   },
   {
     question: "How long does a typical migration take?",
@@ -119,13 +119,13 @@ export default function CloudModernizationPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-blue-500/10 text-blue-500 border-blue-500/20">
+              <Badge className="mb-4 bg-brand/10 text-brand border-brand/20">
                 <Cloud className="w-4 h-4 mr-2" />
                 Cloud Modernization
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Transform Legacy Systems into{" "}
-                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
+                <span className="text-brand">
                   Cloud-Native Architecture
                 </span>
               </h1>
@@ -138,7 +138,7 @@ export default function CloudModernizationPage() {
               <div className="flex flex-wrap gap-4 mb-8">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:opacity-90"
+                  className="bg-brand hover:bg-brand-dark"
                   asChild
                 >
                   <Link href="/contact">
@@ -178,7 +178,7 @@ export default function CloudModernizationPage() {
                   key={stat.label}
                   className="bg-card border rounded-xl p-6 text-center"
                 >
-                  <p className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
+                  <p className="text-3xl font-bold text-brand">
                     {stat.value}
                   </p>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -208,10 +208,10 @@ export default function CloudModernizationPage() {
               return (
                 <div
                   key={capability.title}
-                  className="bg-card border rounded-xl p-6 hover:border-blue-500/30 transition-colors"
+                  className="bg-card border rounded-xl p-6 hover:border-brand/30 transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-blue-500" />
+                  <div className="w-12 h-12 rounded-lg bg-brand/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-brand" />
                   </div>
                   <h3 className="font-bold mb-2">{capability.title}</h3>
                   <p className="text-sm text-muted-foreground">
@@ -240,7 +240,7 @@ export default function CloudModernizationPage() {
                 key={item.step}
                 className="flex gap-6 items-start bg-card border rounded-xl p-6"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-brand flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-bold">{item.step}</span>
                 </div>
                 <div>

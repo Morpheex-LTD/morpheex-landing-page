@@ -1,6 +1,8 @@
-import { ArrowRightIcon, CloudIcon, ZapIcon } from "lucide-react";
+"use client";
+
+import { ArrowRightIcon, Sparkles } from "lucide-react";
+import { useEffect, useState } from "react";
 import { LeadForm } from "../form/lead-form";
-import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import {
   Dialog,
@@ -11,48 +13,77 @@ import {
   DialogTrigger,
 } from "../ui/dialog";
 
-const LandingPageHero = () => {
-  return (
-    <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-      <div className="max-w-6xl mx-auto text-center relative z-10">
-        <Badge className="mb-6 bg-brand/10 text-brand-accent border-brand/30 px-4 py-2 text-sm hover:bg-brand/20 transition-all cursor-pointer">
-          <CloudIcon className="w-4 h-4 mr-2 inline" />
-          Official AWS Services Partner
-        </Badge>
+const features = [
+  "AWS Migrations",
+  "Serverless Architecture",
+  "Cost Optimization",
+  "Kubernetes & ECS",
+  "CI/CD Pipelines",
+];
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          <span className="bg-linear-to-r text-brand bg-clip-text ">
-            Morph Legacy Systems
-          </span>
+const LandingPageHero = () => {
+  const [currentFeature, setCurrentFeature] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="relative pt-32 pb-20 px-6">
+      <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-brand/5 border border-brand/10 text-sm text-foreground">
+          <Sparkles className="w-4 h-4 text-brand" />
+          <span className="transition-all duration-300">{features[currentFeature]}</span>
+        </div>
+
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-[1.1] tracking-tight text-foreground">
+          Cloud Infrastructure
           <br />
-          <span className="text-brand">into Future Advantages</span>
+          <span className="text-brand">That Actually Scales</span>
         </h1>
 
-        <p className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-          Morpheex helps enterprises stop managing technical debt. We engineer
-          high-performance software and serverless cloud solutions that scale
-          with your vision.
+        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+          We migrate legacy systems to modern cloud architecture, cut your
+          infrastructure costs by 60%, and build systems that handle 10x growth
+          without breaking.
         </p>
+
+        {/* Key metrics */}
+        <div className="flex flex-wrap justify-center gap-8 mb-10 text-sm">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-brand">60%</div>
+            <div className="text-muted-foreground">Avg Cost Reduction</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-brand">50+</div>
+            <div className="text-muted-foreground">Projects Delivered</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-brand">99.9%</div>
+            <div className="text-muted-foreground">Uptime SLA</div>
+          </div>
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Dialog>
             <DialogTrigger asChild>
               <Button
                 size="lg"
-                className="bg-linear-to-r from-brand to-brand-accent hover:opacity-90 shadow-lg shadow-brand/30 hover:shadow-brand/50 transition-all hover:scale-105 group"
+                className="bg-brand hover:bg-brand-dark text-white px-8 h-12 text-base font-medium"
               >
-                Start Cloud Audit
-                <ZapIcon className="ml-2 w-4 h-4 group-hover:rotate-12 transition-transform" />
+                Book a Consultation
+                <ArrowRightIcon className="ml-2 w-4 h-4" />
               </Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
-                <DialogTitle>
-                  Book Your Cloud Audit
-                </DialogTitle>
+                <DialogTitle>Book a Free Consultation</DialogTitle>
                 <DialogDescription>
-                  Our architects will review your current AWS setup or legacy
-                  stack and provide a modernization roadmap.
+                  Our architects will review your infrastructure and provide a
+                  modernization roadmap tailored to your goals.
                 </DialogDescription>
               </DialogHeader>
               <LeadForm />
@@ -62,10 +93,13 @@ const LandingPageHero = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-brand/30 bg-transparent hover:text-brand-accent hover:border-brand hover:bg-brand/10 transition-all group"
+            className="px-8 h-12 text-base font-medium"
+            asChild
           >
-            View Our Solutions
-            <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <a href="#case-study">
+              View Our Work
+              <ArrowRightIcon className="ml-2 w-4 h-4" />
+            </a>
           </Button>
         </div>
       </div>

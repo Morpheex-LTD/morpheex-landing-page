@@ -26,7 +26,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
 
@@ -105,7 +107,9 @@ export default async function BlogPostPage({ params }: PageProps) {
               </div>
               <div>
                 <p className="font-medium">{post.author.name}</p>
-                <p className="text-sm text-muted-foreground">{post.author.role}</p>
+                <p className="text-sm text-muted-foreground">
+                  {post.author.role}
+                </p>
               </div>
             </div>
 
@@ -153,7 +157,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="flex items-center gap-2">
             <Button variant="outline" size="icon" asChild>
               <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://morpheex.com/blog/${post.slug}`)}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://Morphlix.com/blog/${post.slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -162,7 +166,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             </Button>
             <Button variant="outline" size="icon" asChild>
               <a
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://morpheex.com/blog/${post.slug}`)}`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://Morphlix.com/blog/${post.slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -184,11 +188,11 @@ export default async function BlogPostPage({ params }: PageProps) {
             <div>
               <p className="font-bold text-lg">{post.author.name}</p>
               <p className="text-sm text-muted-foreground mb-3">
-                {post.author.role} at Morpheex
+                {post.author.role} at Morphlix
               </p>
               <p className="text-sm text-muted-foreground">
-                Building cloud infrastructure that scales. AWS certified architect
-                with a passion for serverless and cost optimization.
+                Building cloud infrastructure that scales. AWS certified
+                architect with a passion for serverless and cost optimization.
               </p>
             </div>
           </div>
@@ -224,34 +228,43 @@ function formatContent(content: string): string {
 
   let html = content
     // Headers
-    .replace(/^## (.*$)/gm, '<h2>$1</h2>')
-    .replace(/^### (.*$)/gm, '<h3>$1</h3>')
+    .replace(/^## (.*$)/gm, "<h2>$1</h2>")
+    .replace(/^### (.*$)/gm, "<h3>$1</h3>")
     // Bold
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
     // Code blocks
-    .replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>')
+    .replace(
+      /```(\w+)?\n([\s\S]*?)```/g,
+      '<pre><code class="language-$1">$2</code></pre>',
+    )
     // Inline code
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
     // Lists
-    .replace(/^- (.*$)/gm, '<li>$1</li>')
-    .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
+    .replace(/^- (.*$)/gm, "<li>$1</li>")
+    .replace(/(<li>.*<\/li>\n?)+/g, "<ul>$&</ul>")
     // Numbered lists
-    .replace(/^\d+\. (.*$)/gm, '<li>$1</li>')
+    .replace(/^\d+\. (.*$)/gm, "<li>$1</li>")
     // Checkboxes
-    .replace(/- \[ \] (.*$)/gm, '<li class="flex items-center gap-2"><input type="checkbox" disabled /> $1</li>')
-    .replace(/- \[x\] (.*$)/gm, '<li class="flex items-center gap-2"><input type="checkbox" checked disabled /> $1</li>')
+    .replace(
+      /- \[ \] (.*$)/gm,
+      '<li class="flex items-center gap-2"><input type="checkbox" disabled /> $1</li>',
+    )
+    .replace(
+      /- \[x\] (.*$)/gm,
+      '<li class="flex items-center gap-2"><input type="checkbox" checked disabled /> $1</li>',
+    )
     // Paragraphs
-    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n\n/g, "</p><p>")
     // Line breaks
-    .replace(/\n/g, '<br />');
+    .replace(/\n/g, "<br />");
 
   // Wrap in paragraph tags
-  html = '<p>' + html + '</p>';
+  html = "<p>" + html + "</p>";
 
   // Clean up empty paragraphs
-  html = html.replace(/<p><\/p>/g, '');
-  html = html.replace(/<p><br \/>/g, '<p>');
-  html = html.replace(/<br \/><\/p>/g, '</p>');
+  html = html.replace(/<p><\/p>/g, "");
+  html = html.replace(/<p><br \/>/g, "<p>");
+  html = html.replace(/<br \/><\/p>/g, "</p>");
 
   return html;
 }

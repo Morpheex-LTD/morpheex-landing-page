@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import {
   ArrowUpRightIcon,
-  BarChartIcon,
   Building2Icon,
   CheckCircle2,
   ClockIcon,
@@ -17,237 +16,181 @@ export function CaseStudy() {
     {
       label: "Cost Reduction",
       value: "42%",
-      icon: <DollarSign className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />,
-      color: "emerald",
+      icon: <DollarSign className="w-5 h-5 text-emerald-600" />,
     },
     {
-      label: "Deployment Speed",
+      label: "Deploy Speed",
       value: "10x",
-      icon: <Zap className="w-6 h-6 text-cyan-600 dark:text-cyan-400" />,
-      color: "cyan",
+      icon: <Zap className="w-5 h-5 text-brand" />,
     },
     {
-      label: "Uptime Achieved",
+      label: "Uptime",
       value: "99.99%",
-      icon: <CheckCircle2 className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-      color: "blue",
+      icon: <CheckCircle2 className="w-5 h-5 text-blue-600" />,
     },
     {
-      label: "Load Time Improvement",
+      label: "Load Time",
       value: "-1.2s",
-      icon: <TrendingUp className="w-6 h-6 text-brand-accent" />,
-      color: "purple",
+      icon: <TrendingUp className="w-5 h-5 text-violet-600" />,
     },
   ];
 
   return (
-    <section id="case-study" className="py-24 px-6 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section id="case-study" className="py-24 px-6 bg-muted/30">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-brand/10 text-brand border-brand/30 px-4 py-2 hover:bg-brand/20 transition-all">
-            <BarChartIcon className="w-4 h-4 mr-2 inline" />
-            Case Study #01
-          </Badge>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-              From Downtime to{" "}
-            </span>
-            <span className="bg-gradient-to-r from-brand-accent to-brand bg-clip-text text-transparent">
-              Domain Dominance
-            </span>
+          <p className="text-sm font-medium text-brand mb-3 uppercase tracking-wide">
+            Case Study
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            From Downtime to Market Leader
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             How we helped a Fortune 500 e-commerce platform eliminate critical
             downtime and achieve industry-leading performance
           </p>
         </div>
 
         {/* Client Overview */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-gradient-to-br from-card/50 to-card/30 border rounded-xl p-6 backdrop-blur-sm hover:border-brand/30 transition-colors">
-            <Building2Icon className="w-8 h-8 text-brand mb-3" />
-            <div className="text-sm text-muted-foreground mb-1">Client</div>
-            <div className="text-foreground font-bold text-lg">
+        <div className="grid md:grid-cols-3 gap-4 mb-12">
+          <div className="bg-card border rounded-lg p-5">
+            <Building2Icon className="w-5 h-5 text-brand mb-3" />
+            <div className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">
+              Client
+            </div>
+            <div className="text-foreground font-semibold">
               Fortune 500 E-commerce
             </div>
           </div>
-          <div className="bg-gradient-to-br from-card/50 to-card/30 border rounded-xl p-6 backdrop-blur-sm hover:border-brand-accent/30 transition-colors">
-            <UsersIcon className="w-8 h-8 text-brand-accent mb-3" />
-            <div className="text-sm text-muted-foreground mb-1">Scale</div>
-            <div className="text-foreground font-bold text-lg">10M+ Daily Users</div>
-          </div>
-          <div className="bg-gradient-to-br from-card/50 to-card/30 border rounded-xl p-6 backdrop-blur-sm hover:border-brand/30 transition-colors">
-            <ClockIcon className="w-8 h-8 text-brand mb-3" />
-            <div className="text-sm text-muted-foreground mb-1">Timeline</div>
-            <div className="text-foreground font-bold text-lg">
-              12 Week Transformation
+          <div className="bg-card border rounded-lg p-5">
+            <UsersIcon className="w-5 h-5 text-brand mb-3" />
+            <div className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">
+              Scale
             </div>
+            <div className="text-foreground font-semibold">10M+ Daily Users</div>
+          </div>
+          <div className="bg-card border rounded-lg p-5">
+            <ClockIcon className="w-5 h-5 text-brand mb-3" />
+            <div className="text-xs text-muted-foreground mb-1 uppercase tracking-wide">
+              Timeline
+            </div>
+            <div className="text-foreground font-semibold">12 Weeks</div>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Left Side: The Story */}
+        <div className="grid lg:grid-cols-2 gap-10">
+          {/* Left Side */}
           <div className="space-y-6">
             {/* Challenge */}
-            <div className="bg-gradient-to-br from-red-500/5 to-card/50 border border-red-500/30 dark:border-red-500/20 rounded-2xl p-8 backdrop-blur-sm">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">⚠️</span>
-                </div>
-                <h3 className="text-2xl font-bold text-foreground">The Challenge</h3>
-              </div>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  A leading e-commerce platform was hemorrhaging{" "}
-                  <span className="text-red-600 dark:text-red-400 font-bold">
-                    $15,000 per hour
-                  </span>{" "}
-                  during peak traffic downtime. Their monolithic legacy
-                  architecture had become a business liability:
-                </p>
-                <ul className="space-y-2 pl-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-600 dark:text-red-400 mt-1">•</span>
-                    <span>Black-box codebase making updates take 6+ weeks</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-600 dark:text-red-400 mt-1">•</span>
-                    <span>Unable to scale during holiday shopping surges</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-600 dark:text-red-400 mt-1">•</span>
-                    <span>
-                      3.2-second page loads causing 35% cart abandonment
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-red-600 dark:text-red-400 mt-1">•</span>
-                    <span>$180K/month in over-provisioned server costs</span>
-                  </li>
-                </ul>
-              </div>
+            <div className="bg-card border border-red-200 dark:border-red-900/30 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-foreground mb-3">
+                The Challenge
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                Their monolithic architecture was costing{" "}
+                <span className="text-red-600 font-medium">$15,000/hour</span>{" "}
+                during peak traffic downtime.
+              </p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-0.5">•</span>
+                  <span>6+ week update cycles due to legacy codebase</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-0.5">•</span>
+                  <span>Unable to scale during holiday traffic surges</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-0.5">•</span>
+                  <span>3.2s page loads causing 35% cart abandonment</span>
+                </li>
+              </ul>
             </div>
 
             {/* Solution */}
-            <div className="bg-gradient-to-br from-brand/5 to-card/50 border border-brand/30 dark:border-brand/20 rounded-2xl p-8 backdrop-blur-sm">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-brand" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground">
-                  The Morpheex Solution
-                </h3>
-              </div>
+            <div className="bg-card border border-brand/20 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
+                <Zap className="w-5 h-5 text-brand" />
+                Our Solution
+              </h3>
               <div className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  We implemented a three-phase modernization strategy:
-                </p>
-                <div className="space-y-4">
-                  {[
-                    {
-                      title: "Frontend Revolution",
-                      desc: "Decoupled the frontend using Next.js 14 with React Server Components, deployed to Vercel Edge Network for sub-200ms global load times",
-                    },
-                    {
-                      title: "Serverless Backend",
-                      desc: "Migrated core services to AWS Lambda with API Gateway, enabling automatic scaling from 0 to 10,000+ concurrent requests without manual intervention",
-                    },
-                    {
-                      title: "AI-Powered Intelligence",
-                      desc: "Integrated Amazon Bedrock to deliver personalized product recommendations, increasing conversion rates by 28% through intelligent customer insights",
-                    },
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-3">
-                      <div className="shrink-0 w-6 h-6 rounded-full bg-brand/20 border border-brand/30 flex items-center justify-center mt-0.5">
-                        <span className="text-xs font-bold text-brand">
-                          {i + 1}
-                        </span>
+                {[
+                  {
+                    title: "Frontend Overhaul",
+                    desc: "Modern React framework deployed to edge CDN for sub-200ms global load times",
+                  },
+                  {
+                    title: "Serverless Backend",
+                    desc: "Event-driven architecture enabling auto-scaling to 10K+ concurrent requests",
+                  },
+                  {
+                    title: "AI Integration",
+                    desc: "ML-powered recommendations increasing conversions by 28%",
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-3">
+                    <div className="shrink-0 w-6 h-6 rounded-full bg-brand/10 border border-brand/20 flex items-center justify-center">
+                      <span className="text-xs font-medium text-brand">
+                        {i + 1}
+                      </span>
+                    </div>
+                    <div>
+                      <div className="text-foreground font-medium text-sm mb-0.5">
+                        {item.title}
                       </div>
-                      <div>
-                        <div className="text-foreground font-semibold mb-1">
-                          {item.title}
-                        </div>
-                        <div className="text-muted-foreground text-sm leading-relaxed">
-                          {item.desc}
-                        </div>
+                      <div className="text-muted-foreground text-sm">
+                        {item.desc}
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Technical Implementation */}
-            <div className="bg-gradient-to-br from-card/50 to-card/30 border rounded-2xl p-8 backdrop-blur-sm">
-              <h4 className="text-lg font-bold text-foreground mb-4">
-                Technology Stack
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Next.js 14",
-                  "AWS Lambda",
-                  "API Gateway",
-                  "DynamoDB",
-                  "S3",
-                  "CloudFront",
-                  "Amazon Bedrock",
-                  "Vercel Edge",
-                ].map((tech) => (
-                  <Badge
-                    key={tech}
-                    variant="secondary"
-                    className="bg-secondary text-secondary-foreground"
-                  >
-                    {tech}
-                  </Badge>
+                  </div>
                 ))}
               </div>
             </div>
+
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Next.js",
+                "Serverless",
+                "Kubernetes",
+                "PostgreSQL",
+                "Redis",
+                "Terraform",
+              ].map((tech) => (
+                <Badge key={tech} variant="secondary" className="text-xs">
+                  {tech}
+                </Badge>
+              ))}
+            </div>
           </div>
 
-          {/* Right Side: Results & Metrics */}
+          {/* Right Side */}
           <div className="space-y-6">
-            {/* Key Results Header */}
-            <div className="bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/30 dark:border-emerald-500/20 rounded-2xl p-6 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold text-foreground mb-2">
-                Measurable Impact
-              </h3>
-              <p className="text-muted-foreground text-sm">
-                Achieved within 12 weeks of deployment
-              </p>
-            </div>
-
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 gap-4">
               {metrics.map((metric) => (
                 <div
                   key={metric.label}
-                  className="bg-gradient-to-br from-card/50 to-card/30 border rounded-2xl p-6 hover:border-brand/30 transition-all group"
+                  className="bg-card border rounded-lg p-5 text-center"
                 >
-                  <div className="flex flex-col items-center text-center">
-                    <div
-                      className="mb-4 p-3 bg-muted rounded-xl group-hover:scale-110 transition-transform"
-                    >
-                      {metric.icon}
-                    </div>
-                    <div
-                      className={`text-4xl font-black mb-2 bg-gradient-to-r from-${metric.color}-600 to-${metric.color}-500 dark:from-${metric.color}-400 dark:to-${metric.color}-300 bg-clip-text text-transparent`}
-                    >
-                      {metric.value}
-                    </div>
-                    <div className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                      {metric.label}
-                    </div>
+                  <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted mb-3">
+                    {metric.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-foreground mb-1">
+                    {metric.value}
+                  </div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wide">
+                    {metric.label}
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Business Impact */}
-            <div className="bg-gradient-to-br from-card/50 to-card/30 border rounded-2xl p-8 backdrop-blur-sm">
-              <h4 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-                <TrendingUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            <div className="bg-card border rounded-lg p-6">
+              <h4 className="text-base font-semibold text-foreground mb-4 flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-emerald-600" />
                 Business Outcomes
               </h4>
               <div className="space-y-3">
@@ -259,31 +202,31 @@ export function CaseStudy() {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="flex justify-between items-center py-2 border-b last:border-0"
+                    className="flex justify-between items-center py-2 border-b border-border last:border-0"
                   >
-                    <span className="text-muted-foreground text-sm">{item.label}</span>
-                    <span className="text-foreground font-bold">{item.value}</span>
+                    <span className="text-muted-foreground text-sm">
+                      {item.label}
+                    </span>
+                    <span className="text-foreground font-semibold text-sm">
+                      {item.value}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* CTA Card */}
-            <div className="bg-gradient-to-r from-brand to-brand-accent rounded-2xl p-8 relative overflow-hidden group cursor-pointer hover:opacity-90 transition-all">
-              <BarChartIcon className="absolute -right-4 -bottom-4 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity" />
-              <div className="relative z-10">
-                <div className="text-primary-foreground font-bold text-xl mb-2">
-                  Want these results for your platform?
-                </div>
-                <div className="text-primary-foreground/90 text-sm mb-4">
-                  Download the complete technical case study with architecture
-                  diagrams and implementation timeline
-                </div>
-                <Button className="bg-background text-foreground hover:bg-background/90 font-semibold group/btn shadow-lg">
-                  Download Case Study
-                  <ArrowUpRightIcon className="ml-2 w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                </Button>
+            {/* CTA */}
+            <div className="bg-brand rounded-lg p-6">
+              <div className="text-white font-semibold text-lg mb-2">
+                Get similar results for your platform
               </div>
+              <div className="text-white/80 text-sm mb-4">
+                Download the complete technical case study
+              </div>
+              <Button className="bg-white text-brand hover:bg-white/90 font-medium">
+                Download Case Study
+                <ArrowUpRightIcon className="ml-2 w-4 h-4" />
+              </Button>
             </div>
           </div>
         </div>

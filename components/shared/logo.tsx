@@ -12,7 +12,7 @@ const Logo = () => {
         className="object-contain! w-10"
       />
       <span className="text-xl font-bold tracking-tighter uppercase">
-        Morpheex
+        Morphlix
       </span>
     </Link>
   );

@@ -203,7 +203,7 @@ New guidance on:
 
 ## Our Approach
 
-At Morpheex, we integrate Well-Architected Reviews into every engagement. It's not a one-time audit—it's an ongoing practice.
+At Morphlix, we integrate Well-Architected Reviews into every engagement. It's not a one-time audit—it's an ongoing practice.
 
 ## Get Started
 

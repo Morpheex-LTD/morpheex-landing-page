@@ -50,11 +50,13 @@ export function LeadForm() {
 
   if (isSubmitted) {
     return (
-      <div className="flex flex-col items-center justify-center py-10 text-center space-y-4">
-        <CheckCircle className="w-16 h-16 text-brand-cyan animate-bounce" />
-        <h3 className="text-2xl font-bold">Request Received!</h3>
-        <p className="text-slate-400">
-          An AWS Architect from Morpheex will reach out within 24 hours.
+      <div className="flex flex-col items-center justify-center py-8 text-center space-y-3">
+        <CheckCircle className="w-12 h-12 text-green-500" />
+        <h3 className="text-xl font-semibold text-foreground">
+          Request Received
+        </h3>
+        <p className="text-muted-foreground text-sm">
+          An AWS Architect will reach out within 24 hours.
         </p>
       </div>
     );
@@ -66,19 +68,15 @@ export function LeadForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-4 text-left"
       >
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-3">
           <FormField
             control={form.control}
             name="firstName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>First Name</FormLabel>
+                <FormLabel className="text-sm">First Name</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder="John"
-                    {...field}
-                    className="bg-slate-900 border-slate-700"
-                  />
+                  <Input placeholder="John" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -89,13 +87,9 @@ export function LeadForm() {
             name="lastName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Last Name</FormLabel>
+                <FormLabel className="text-sm">Last Name</FormLabel>
                 <FormControl>
-                  <Input
-                    placeholder="Doe"
-                    {...field}
-                    className="bg-slate-900 border-slate-700"
-                  />
+                  <Input placeholder="Doe" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -107,13 +101,9 @@ export function LeadForm() {
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Business Email</FormLabel>
+              <FormLabel className="text-sm">Business Email</FormLabel>
               <FormControl>
-                <Input
-                  placeholder="john@company.com"
-                  {...field}
-                  className="bg-slate-900 border-slate-700"
-                />
+                <Input placeholder="john@company.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -124,13 +114,9 @@ export function LeadForm() {
           name="companyName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Company</FormLabel>
+              <FormLabel className="text-sm">Company</FormLabel>
               <FormControl>
-                <Input
-                  placeholder="Acme Corp"
-                  {...field}
-                  className="bg-slate-900 border-slate-700"
-                />
+                <Input placeholder="Acme Corp" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -141,12 +127,12 @@ export function LeadForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>How can we help?</FormLabel>
+              <FormLabel className="text-sm">How can we help?</FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Tell us about your current infrastructure..."
                   {...field}
-                  className="bg-slate-900 border-slate-700 h-24"
+                  className="h-20 resize-none"
                 />
               </FormControl>
               <FormMessage />
@@ -155,7 +141,7 @@ export function LeadForm() {
         />
         <Button
           type="submit"
-          className="w-full bg-brand-sapphire hover:bg-brand-cyan hover:text-slate-900 transition-all font-bold"
+          className="w-full bg-brand hover:bg-brand-dark font-medium"
           disabled={form.formState.isSubmitting}
         >
           {form.formState.isSubmitting ? (

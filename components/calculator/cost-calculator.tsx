@@ -203,7 +203,7 @@ export function CostCalculator() {
                   {formatCurrency(results.estimatedSavings)}
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
-                  per year with Morpheex optimization
+                  per year with Morphlix optimization
                 </p>
               </div>
 

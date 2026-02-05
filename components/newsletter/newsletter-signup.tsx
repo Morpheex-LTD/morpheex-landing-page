@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { CheckCircle, Loader2, Mail, Sparkles } from "lucide-react";
+import { CheckCircle, Loader2, Mail } from "lucide-react";
 import { useState } from "react";
 
 interface NewsletterSignupProps {
@@ -110,19 +110,15 @@ export function NewsletterSignup({
   }
 
   return (
-    <div className="bg-gradient-to-br from-brand/5 to-brand-accent/5 border border-brand/10 rounded-2xl p-6 md:p-8">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center">
-          <Mail className="w-5 h-5 text-brand" />
-        </div>
-        <Sparkles className="w-5 h-5 text-brand-accent" />
+    <div className="bg-card border rounded-xl p-6">
+      <div className="flex items-center gap-2 mb-3">
+        <Mail className="w-4 h-4 text-brand" />
+        <h3 className="text-base font-semibold">{title}</h3>
       </div>
-
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-muted-foreground text-sm mb-6">{description}</p>
+      <p className="text-muted-foreground text-sm mb-5">{description}</p>
 
       <form onSubmit={handleSubmit} className="space-y-3">
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col sm:flex-row gap-2">
           <Input
             type="email"
             placeholder="you@company.com"
@@ -133,13 +129,10 @@ export function NewsletterSignup({
           <Button
             type="submit"
             disabled={isLoading}
-            className="bg-gradient-to-r from-brand to-brand-accent hover:opacity-90 whitespace-nowrap"
+            className="bg-brand hover:bg-brand-dark whitespace-nowrap"
           >
             {isLoading ? (
-              <>
-                <Loader2 className="w-4 h-4 animate-spin mr-2" />
-                Subscribing...
-              </>
+              <Loader2 className="w-4 h-4 animate-spin" />
             ) : (
               "Subscribe"
             )}
@@ -148,9 +141,8 @@ export function NewsletterSignup({
         {error && <p className="text-xs text-red-500">{error}</p>}
       </form>
 
-      <p className="text-xs text-muted-foreground mt-4">
-        No spam, ever. Unsubscribe anytime. By subscribing, you agree to our
-        Privacy Policy.
+      <p className="text-xs text-muted-foreground mt-3">
+        No spam. Unsubscribe anytime.
       </p>
     </div>
   );

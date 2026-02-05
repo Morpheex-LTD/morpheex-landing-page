@@ -550,7 +550,7 @@ export function CreditApplicationForm() {
                           <FormLabel className="text-sm font-normal">
                             By clicking &quot;Accept&quot;, I confirm that I am
                             authorized to legally bind my company and, on its
-                            behalf, I have read and agreed to the Morpheex AWS{" "}
+                            behalf, I have read and agreed to the Morphlix AWS{" "}
                             <a href="/terms" className="text-brand underline">
                               Terms of Service
                             </a>{" "}
@@ -572,11 +572,11 @@ export function CreditApplicationForm() {
                 <div className="space-y-6">
                   <div>
                     <h2 className="text-2xl font-bold mb-2">
-                      Join Morpheex AWS organization
+                      Join Morphlix AWS organization
                     </h2>
                     <p className="text-muted-foreground">
                       To unlock AWS credits, link your account with PartnerWay -
-                      our verified AWS organization operated by Morpheex.
+                      our verified AWS organization operated by Morphlix.
                     </p>
                   </div>
 

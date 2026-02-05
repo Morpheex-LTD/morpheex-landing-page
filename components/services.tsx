@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -6,120 +6,78 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Bot, CheckCircle2Icon, Cloud, Code2Icon } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Bot, Cloud, Code2 } from "lucide-react";
+import Link from "next/link";
 
 const Services = () => {
+  const services = [
+    {
+      icon: <Cloud className="w-6 h-6" />,
+      title: "Cloud Modernization",
+      description:
+        "Migrate legacy systems to modern, scalable cloud architectures. We handle the complexity of containerization, serverless, and multi-cloud deployments.",
+      href: "/services/cloud-modernization",
+    },
+    {
+      icon: <Code2 className="w-6 h-6" />,
+      title: "Software Development",
+      description:
+        "Build high-performance applications with modern frameworks. From real-time APIs to responsive frontends, we deliver production-ready code.",
+      href: "/services/full-stack-development",
+    },
+    {
+      icon: <Bot className="w-6 h-6" />,
+      title: "AI & Data Solutions",
+      description:
+        "Turn your data into competitive advantage. We build intelligent systems, data pipelines, and ML infrastructure that drive business decisions.",
+      href: "/services/ai-data-strategy",
+    },
+  ];
+
   return (
-    <section id="services" className="py-20 px-6 relative">
-      <div className="max-w-7xl mx-auto">
+    <section id="services" className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-brand-accent/10 text-brand-accent border-brand-accent/30">
-            The Multiplier Effect
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
-            Strategic services to accelerate your digital transformation
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+            What We Do
           </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Strategic engineering services to modernize your infrastructure and
+            accelerate your business
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <Card className="bg-gradient-to-br from-card/50 to-card/30 hover:border-brand/50 transition-all hover:shadow-xl hover:shadow-brand/10 hover:-translate-y-1 backdrop-blur-sm group">
-            <CardHeader>
-              <div className="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand/20 transition-all group-hover:scale-110">
-                <Cloud className="w-6 h-6 text-brand" />
-              </div>
-              <CardTitle className="text-foreground text-2xl">
-                Cloud Modernization
-              </CardTitle>
-              <CardDescription>
-                Stop paying for idle servers. We refactor your stack into an
-                elastic, AWS-optimized engine.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                {[
-                  "Serverless Migration",
-                  "Docker/Kubernetes Orchestration",
-                  "FinOps Cost Reduction",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-muted-foreground"
-                  >
-                    <CheckCircle2Icon className="w-5 h-5 text-brand mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <Link key={index} href={service.href} className="group">
+              <Card className="h-full bg-card border hover:border-brand/30 hover:shadow-lg transition-all duration-300">
+                <CardHeader>
+                  <div className="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center mb-4 text-brand group-hover:bg-brand group-hover:text-white transition-colors">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl flex items-center justify-between">
+                    {service.title}
+                    <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-brand transition-colors" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
 
-          {/* Card 2 */}
-          <Card className="bg-gradient-to-br from-card/50 to-card/30 hover:border-brand-accent/50 transition-all hover:shadow-xl hover:shadow-brand-accent/10 hover:-translate-y-1 backdrop-blur-sm group">
-            <CardHeader>
-              <div className="w-12 h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-accent/20 transition-all group-hover:scale-110">
-                <Code2Icon className="w-6 h-6 text-brand-accent" />
-              </div>
-              <CardTitle className="text-foreground text-2xl">
-                Full-Stack Dev
-              </CardTitle>
-              <CardDescription>
-                High-performance Next.js and Node.js applications built for
-                scale, speed, and security.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                {[
-                  "Next.js Enterprise Scaling",
-                  "Real-time Architecture",
-                  "Custom API Design",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-muted-foreground"
-                  >
-                    <CheckCircle2Icon className="w-5 h-5 text-brand-accent mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-
-          {/* Card 3 */}
-          <Card className="bg-gradient-to-br from-card/50 to-card/30 hover:border-brand/50 transition-all hover:shadow-xl hover:shadow-brand/10 hover:-translate-y-1 backdrop-blur-sm group">
-            <CardHeader>
-              <div className="w-12 h-12 bg-brand/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand/20 transition-all group-hover:scale-110">
-                <Bot className="w-6 h-6 text-brand" />
-              </div>
-              <CardTitle className="text-foreground text-2xl">
-                AI & Data Strategy
-              </CardTitle>
-              <CardDescription>
-                Leverage Amazon Bedrock to integrate generative AI directly into
-                your business workflows.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
-                {[
-                  "Amazon Bedrock Integration",
-                  "S3 Data Lake Infrastructure",
-                  "Automated Document Insight",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-muted-foreground"
-                  >
-                    <CheckCircle2Icon className="w-5 h-5 text-brand mt-0.5 shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+        {/* View All */}
+        <div className="text-center mt-10">
+          <Button asChild variant="outline">
+            <Link href="/services">
+              View All Services
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

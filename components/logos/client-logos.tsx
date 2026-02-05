@@ -16,8 +16,6 @@ const clients: Client[] = [
   { name: "ScaleUp" },
   { name: "Nextera" },
   { name: "Quantum" },
-  { name: "Elevate" },
-  { name: "Horizon" },
 ];
 
 interface ClientLogosProps {
@@ -27,14 +25,14 @@ interface ClientLogosProps {
 }
 
 export function ClientLogos({
-  title = "Trusted by innovative companies",
+  title = "Trusted by innovative teams",
   variant = "default",
   className,
 }: ClientLogosProps) {
   return (
-    <div className={cn("py-12", className)}>
+    <div className={cn("py-10", className)}>
       {variant === "default" && (
-        <p className="text-center text-sm text-muted-foreground mb-8">
+        <p className="text-center text-xs text-muted-foreground mb-6 uppercase tracking-wide">
           {title}
         </p>
       )}
@@ -42,19 +40,19 @@ export function ClientLogos({
       {/* Scrolling Logos */}
       <div className="relative overflow-hidden">
         {/* Gradient Masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10" />
 
         {/* Scrolling Container */}
         <div className="flex animate-scroll">
           {/* First set of logos */}
-          <div className="flex gap-8 md:gap-12 items-center shrink-0 pr-8 md:pr-12">
+          <div className="flex gap-10 md:gap-14 items-center shrink-0 pr-10 md:pr-14">
             {clients.map((client, index) => (
               <ClientLogo key={`first-${index}`} client={client} />
             ))}
           </div>
           {/* Duplicate for seamless loop */}
-          <div className="flex gap-8 md:gap-12 items-center shrink-0 pr-8 md:pr-12">
+          <div className="flex gap-10 md:gap-14 items-center shrink-0 pr-10 md:pr-14">
             {clients.map((client, index) => (
               <ClientLogo key={`second-${index}`} client={client} />
             ))}
@@ -73,7 +71,7 @@ export function ClientLogos({
           }
         }
         .animate-scroll {
-          animation: scroll 30s linear infinite;
+          animation: scroll 25s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
@@ -85,17 +83,15 @@ export function ClientLogos({
 
 function ClientLogo({ client }: { client: Client }) {
   return (
-    <div className="flex items-center justify-center px-4 py-2 rounded-lg bg-card/50 border border-transparent hover:border-brand/20 transition-colors">
+    <div className="flex items-center justify-center">
       {client.logo ? (
-        // If logo image is provided, use it
         <img
           src={client.logo}
           alt={client.name}
-          className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+          className="h-6 w-auto opacity-40 hover:opacity-70 transition-opacity grayscale"
         />
       ) : (
-        // Placeholder with company name
-        <span className="text-lg font-bold text-muted-foreground/50 hover:text-muted-foreground transition-colors whitespace-nowrap">
+        <span className="text-base font-semibold text-muted-foreground/40 hover:text-muted-foreground/60 transition-colors whitespace-nowrap">
           {client.name}
         </span>
       )}
@@ -107,16 +103,16 @@ function ClientLogo({ client }: { client: Client }) {
 export function ClientLogosGrid({ className }: { className?: string }) {
   return (
     <div className={cn("", className)}>
-      <p className="text-center text-sm text-muted-foreground mb-6">
-        Trusted by innovative companies worldwide
+      <p className="text-center text-xs text-muted-foreground mb-5 uppercase tracking-wide">
+        Trusted by innovative teams
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        {clients.slice(0, 5).map((client, index) => (
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        {clients.slice(0, 4).map((client, index) => (
           <div
             key={index}
-            className="flex items-center justify-center p-4 rounded-lg bg-card/50 border hover:border-brand/20 transition-colors"
+            className="flex items-center justify-center p-3 rounded-lg border"
           >
-            <span className="text-sm font-semibold text-muted-foreground">
+            <span className="text-sm font-medium text-muted-foreground">
               {client.name}
             </span>
           </div>

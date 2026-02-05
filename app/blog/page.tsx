@@ -2,16 +2,20 @@ import { BlogCard } from "@/components/blog/blog-card";
 import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { blogPosts, getAllCategories, getFeaturedPosts } from "@/lib/blog/posts";
+import {
+  blogPosts,
+  getAllCategories,
+  getFeaturedPosts,
+} from "@/lib/blog/posts";
 import { BookOpen, Rss } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Blog | Cloud Insights & Engineering Best Practices",
   description:
-    "Expert insights on AWS, serverless architecture, cloud cost optimization, and modern software engineering from the Morpheex team.",
+    "Expert insights on AWS, serverless architecture, cloud cost optimization, and modern software engineering from the Morphlix team.",
   openGraph: {
-    title: "Morpheex Blog | Cloud Engineering Insights",
+    title: "Morphlix Blog | Cloud Engineering Insights",
     description:
       "Expert insights on AWS, serverless architecture, and cloud cost optimization.",
   },
@@ -48,7 +52,11 @@ export default function BlogPage() {
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          <Button variant="default" size="sm" className="bg-brand hover:bg-brand/90">
+          <Button
+            variant="default"
+            size="sm"
+            className="bg-brand hover:bg-brand/90"
+          >
             All Posts
           </Button>
           {categories.map((category) => (
